@@ -3,7 +3,7 @@
     <div class="container">
       <main class="main flex flex-col">
         <div class="flex justify-center my-5">
-          <img src="@/assets/psihologiya.jpg" alt="">
+          <img class="w-96 h-96 rounded-full" src="@/assets/psihologiya.jpg" alt="">
         </div>
         <div class="flex flex-col justify-center my-5 px-10">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus cupiditate labore vitae nesciunt ab animi mollitia veritatis doloribus doloremque aut 
