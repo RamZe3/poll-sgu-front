@@ -1,9 +1,7 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <HeaderBlock></HeaderBlock>
   <router-view/>
+  <FooterBlock></FooterBlock>
 </template>
 
 <style>
@@ -13,6 +11,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background: linear-gradient(115deg, rgba(240,245,229,1) 0%, rgba(242,241,223,1) 55%, rgba(230,224,209,1) 100%);
 }
 
 nav {
@@ -25,6 +24,6 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #8b9bf5;
 }
 </style>
