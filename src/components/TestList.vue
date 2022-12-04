@@ -8,21 +8,30 @@
                         <p class="font-bold">Список тестов</p>
                     </div>
                     <hr>
+                    <div class="flex">
+                        <div class="w-1/2 flex justify-start">
+                            <p class="font-bold">Название</p>
+                        </div>
+                        <div class="w-1/2 flex justify-start">
+                            <p class="font-bold">Описание</p>
+                        </div>
+                    </div>
+                    <hr>
                     <div class="flex-col py-5">
                         <div class="flex">
                             <div class="w-1/2 flex justify-start">
-                                <a href="#">Футбол</a>
+                                <a href="tests/result">Футбол</a>
                             </div>
                             <div class="w-1/2 flex justify-start">
-                                <p>Этот тест позволит определить, Павел гей или нет</p>
+                                <p>Этот тест позволит определить...</p>
                             </div>
                         </div>
                         <div class="flex">
                             <div class="w-1/2 flex justify-start">
-                                <a href="#">Шахматы</a>
+                                <a href="tests/result">Шахматы</a>
                             </div>
                             <div class="w-1/2 flex justify-start">
-                                <p>Этот тест позволит определить, Рамиль гей или нет</p>
+                                <p>Этот тест позволит определить...</p>
                             </div>
                         </div>
                     </div>
