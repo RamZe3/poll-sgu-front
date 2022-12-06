@@ -14,10 +14,6 @@
   background: linear-gradient(115deg, rgba(240,245,229,1) 0%, rgba(242,241,223,1) 55%, rgba(230,224,209,1) 100%);
 }
 
-nav {
-  padding: 30px;
-}
-
 nav a {
   font-weight: bold;
   color: #2c3e50;

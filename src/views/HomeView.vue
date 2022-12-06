@@ -12,6 +12,8 @@ import HeaderBlock from '@/components/HeaderBlock.vue'
 import WelcomeSection from '@/components/WelcomeSection.vue'
 import FooterBlock from '@/components/FooterBlock.vue'
 
+document.title = 'Главная';
+
 export default {
   name: 'HomeView',
   components: {

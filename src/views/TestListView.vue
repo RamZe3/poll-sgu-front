@@ -12,6 +12,8 @@ import HeaderBlock from '@/components/HeaderBlock.vue'
 import TestList from '@/components/TestList.vue'
 import FooterBlock from '@/components/FooterBlock.vue'
 
+document.title = 'Тесты';
+
 export default {
 name: 'TestListView',
 components: {

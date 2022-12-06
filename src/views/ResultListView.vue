@@ -14,6 +14,8 @@ import ResultList from '@/components/ResultList.vue'
 import FooterBlock from '@/components/FooterBlock.vue'
 import UserAuth from '@/components/UserAuth.vue'
 
+document.title = 'Результаты';
+
 export default {
 name: 'ResultListView',
 components: {

@@ -12,6 +12,8 @@ import HeaderBlock from '@/components/HeaderBlock.vue'
 import TestForm from '@/components/TestForm.vue'
 import FooterBlock from '@/components/FooterBlock.vue'
 
+document.title = 'Тест';
+
 export default {
 name: 'TestView',
 components: {
