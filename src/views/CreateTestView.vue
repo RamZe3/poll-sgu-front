@@ -12,6 +12,8 @@ import HeaderBlock from '@/components/HeaderBlock.vue'
 import CreateTest from '@/components/CreateTest.vue'
 import FooterBlock from '@/components/FooterBlock.vue'
 
+document.title = 'Создать тест';
+
 export default {
 name: 'CreateTestView',
 components: {

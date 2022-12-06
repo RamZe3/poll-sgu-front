@@ -19,11 +19,11 @@
                   <div class="justify-start">
                     <div class="flex my-3 items-center">
                         <div class="w-4 h-4 border border-gray-300 rounded bg-blue-700 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800"></div>
-                        <p class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Да, я не гей</p>
+                        <p class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Да</p>
                     </div>
                     <div class="flex my-3 items-center">
                         <div class="flex w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800"></div>
-                        <p class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Да, я не гей</p>
+                        <p class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Да</p>
                     </div>
                   </div>
                 </div>
@@ -39,11 +39,11 @@
                   <div class="justify-start">
                     <div class="flex my-3 items-center">
                         <div class="w-4 h-4 border border-gray-300 rounded bg-blue-700 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800"></div>
-                        <p class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Да, я не гей</p>
+                        <p class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Да</p>
                     </div>
                     <div class="flex my-3 items-center">
                         <div class="flex w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800"></div>
-                        <p class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Да, я не гей</p>
+                        <p class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Да</p>
                     </div>
                   </div>
                 </div>
@@ -65,6 +65,8 @@
 </template>
 
 <script>
+document.title = 'Результат теста';
+
 export default {
     name: "result-form"
 }
