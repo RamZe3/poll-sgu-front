@@ -1,0 +1,89 @@
+{
+  "users": [
+    {
+      "id": "957db7e1-b2a7-4273-a36c-87842edc06c3",
+      "email": "test@mail.ru",
+      "login": "admin",
+      "password": "123",
+      "role": "user | creator",
+      "test_by_invite": [
+        {
+        "id": "800db7e1-b2a7-4273-a36c-87842edc06c3"
+        },
+        {
+          "id": "800db7e1-b2a7-4273-a36c-87842edc06c3"
+        }
+      ]
+    }
+  ],
+
+  "tests":[
+    {
+      "id": "800db7e1-b2a7-4273-a36c-87842edc06c3",
+      "creator_id": "957db7e1-b2a7-4273-a36c-87842edc06c3",
+      "by_invitation": false,
+      "title": "Title",
+      "description": "Des",
+      "type": "default",
+      "questions": [
+        {
+          "id": "555db7e1-b2a7-4273-a36c-87842edc06c3",
+          "number": 1,
+          "question_text": "What is: ?"
+        },
+        {
+          "id": "555db7e1-b2a7-4273-a36c-87842edc06c3",
+          "number": 2,
+          "question_text": "What is: ?"
+        }
+      ]
+    },
+    {
+      "id": "555db7e1-b2a7-4273-a36c-87842edc06c3",
+      "title": "Title",
+      "description": "Des",
+      "type": "psychological",
+      "questions": [
+        {
+          "id": "555db7e1-b2a7-4273-a36c-87842edc06c3",
+          "number": 1,
+          "question_text": "What is: ?",
+          "value": 1
+        },
+        {
+          "id": "555db7e1-b2a7-4273-a36c-87842edc06c3",
+          "number": 2,
+          "question_text": "What is: ?",
+          "value": -1
+        }
+      ]
+    }
+  ],
+
+  "results": [
+    {
+      "id": "957db7e1-b2a7-4273-a36c-A7542edc06c3",
+      "creator_id": "957db7e1-b2a7-4273-a36c-87842edc06c3",
+      "user_id": "957db7e1-b2a7-4273-a36c-87842edc06c3",
+      "test_id": "800db7e1-b2a7-4273-a36c-87842edc06c3",
+      "title": "Title",
+      "description": "Des",
+      "type": "default",
+      "questions": [
+        {
+          "id": "555db7e1-b2a7-4273-a36c-87842edc06c3",
+          "number": 2,
+          "question_text": "What is: ?",
+          "isChecked": true
+        },
+        {
+          "id": "555db7e1-b2a7-4273-a36c-87842edc06c3",
+          "number": 2,
+          "question_text": "What is: ?",
+          "isChecked": false
+        }
+      ],
+      "answer": "auto or comment"
+    }
+  ]
+}
