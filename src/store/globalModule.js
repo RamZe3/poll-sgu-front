@@ -3,7 +3,7 @@ export const globalModule = {
         isAuth: false,
         //errorMessage: null,
         login: null,
-        role: null,
+        roles: [],
     }),
 
     getters: {
@@ -13,8 +13,8 @@ export const globalModule = {
         LOGIN: state => {
             return state.login
         },
-        ROLE: state => {
-            return state.role
+        ROLES: state => {
+            return state.roles
         },
     },
 
@@ -25,8 +25,8 @@ export const globalModule = {
         setIsAuth(state, isAuth) {
             state.isAuth = isAuth;
         },
-        setRole(state){
-            state.role = sessionStorage.getItem("Role");
+        setRoles(state){
+            state.roles = sessionStorage.getItem("Roles");
         },
     },
 
@@ -36,7 +36,7 @@ export const globalModule = {
             if (sessionStorage.getItem("UserID") != null){
                 context.commit("setIsAuth", true)
                 context.commit("setLogin")
-                context.commit("setRole")
+                context.commit("setRoles")
             }
             else {
                 context.commit("setIsAuth", false)
@@ -46,14 +46,14 @@ export const globalModule = {
         authentication: (context, user) => {
             sessionStorage.setItem("UserID", user.id)
             sessionStorage.setItem("Login", user.login)
-            sessionStorage.setItem("Role", user.role)
+            sessionStorage.setItem("Roles", user.roles)
             context.commit("setIsAuth", true)
         },
 
         signOut: (context) => {
             sessionStorage.removeItem("UserID")
             sessionStorage.removeItem("Login")
-            sessionStorage.removeItem("Role")
+            sessionStorage.removeItem("Roles")
             context.commit("setIsAuth", false)
         }
     },

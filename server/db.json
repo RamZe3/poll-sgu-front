@@ -5,61 +5,356 @@
       "email": "test@mail.ru",
       "login": "admin",
       "password": "123",
-      "role": "user | creator",
-      "test_by_invite": [
-        {
-        "id": "800db7e1-b2a7-4273-a36c-87842edc06c3"
-        },
-        {
-          "id": "800db7e1-b2a7-4273-a36c-87842edc06c3"
-        }
+      "roles": [
+        "user",
+        "creator"
+      ],
+      "tests_by_invite": []
+    },
+    {
+      "id": "c5f566d7-f2f2-43ca-808a-65ff1c832f56",
+      "email": "cocix27210@bomoads.com",
+      "login": "Рамиль",
+      "password": "123123",
+      "roles": [
+        "user",
+        "creator"
+      ],
+      "tests_by_invite": [
+        "80asd0db7e1-b2a7-4273-a36c-87842edc06c3",
+        "",
+        "",
+        ""
       ]
+    },
+    {
+      "id": "92a49c59-950a-4837-9a88-8a882165b251",
+      "email": "ramilfitkulin@mail.ru",
+      "login": "32123",
+      "password": "2323",
+      "roles": [
+        "user"
+      ],
+      "tests_by_invite": []
     }
   ],
-
-  "tests":[
+  "tests": [
     {
       "id": "800db7e1-b2a7-4273-a36c-87842edc06c3",
       "creator_id": "957db7e1-b2a7-4273-a36c-87842edc06c3",
       "by_invitation": false,
-      "title": "Title",
-      "description": "Des",
-      "type": "default",
+      "title": "Test1",
+      "description": "Описание...",
+      "type": "default | psiho",
       "questions": [
         {
-          "id": "555db7e1-b2a7-4273-a36c-87842edc06c3",
-          "number": 1,
-          "question_text": "What is: ?"
+          "number": 0,
+          "question_text": "What is: ?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ]
         },
         {
-          "id": "555db7e1-b2a7-4273-a36c-87842edc06c3",
+          "number": 1,
+          "question_text": "What is12312: ?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ]
+        },
+        {
           "number": 2,
-          "question_text": "What is: ?"
+          "question_text": "Last is12312: ?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "555db7e1-b2a7-4273-a36c-87842edc06c3",
-      "title": "Title",
-      "description": "Des",
-      "type": "psychological",
+      "id": "80asd0db7e1-b2a7-4273-a36c-87842edc06c3",
+      "creator_id": "957db7e1-b2a7-4273-a36c-87842edc06c3",
+      "by_invitation": true,
+      "title": "Test2",
+      "description": "Описание...",
+      "type": "default | psiho",
       "questions": [
         {
-          "id": "555db7e1-b2a7-4273-a36c-87842edc06c3",
-          "number": 1,
+          "number": 0,
           "question_text": "What is: ?",
-          "value": 1
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ]
         },
         {
-          "id": "555db7e1-b2a7-4273-a36c-87842edc06c3",
-          "number": 2,
+          "number": 1,
           "question_text": "What is: ?",
-          "value": -1
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "84e429dc-7b42-482a-89af-7c3ab59a6b2d",
+      "creator_id": "c5f566d7-f2f2-43ca-808a-65ff1c832f56",
+      "by_invitation": false,
+      "title": "Test",
+      "description": "123",
+      "type": null,
+      "questions": [
+        {
+          "id": "4f82633f-dc04-4d7c-beb3-3c107e7eb3eb",
+          "number": 0,
+          "question_text": "1",
+          "answers": [
+            {
+              "number": 0,
+              "title": "1"
+            }
+          ]
+        },
+        {
+          "id": "c7f44700-4fbd-48f8-863b-7fed121190a1",
+          "number": 1,
+          "question_text": "2",
+          "answers": [
+            {
+              "number": 0,
+              "title": "2"
+            }
+          ]
+        },
+        {
+          "id": "7282fe12-587c-47ba-bb4d-5bf258cbfa2f",
+          "number": 2,
+          "question_text": "3",
+          "answers": [
+            {
+              "number": 0,
+              "title": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "48a9f29a-32e9-4c46-9820-4487d750e40b",
+      "creator_id": "c5f566d7-f2f2-43ca-808a-65ff1c832f56",
+      "by_invitation": false,
+      "title": "Test",
+      "description": "123",
+      "type": null,
+      "questions": [
+        {
+          "id": "6faab78b-7f96-43c3-8df3-a7fef3d17027",
+          "number": 0,
+          "question_text": "1",
+          "answers": [
+            {
+              "number": 0,
+              "title": "1"
+            }
+          ]
+        },
+        {
+          "id": "5ea73b6f-4a16-4160-91e4-9fb6a9be4135",
+          "number": 1,
+          "question_text": "2",
+          "answers": [
+            {
+              "number": 0,
+              "title": "2"
+            }
+          ]
+        },
+        {
+          "id": "575c72c9-ba20-4343-87aa-b9d599a4eef1",
+          "number": 2,
+          "question_text": "3",
+          "answers": [
+            {
+              "number": 0,
+              "title": "3"
+            }
+          ]
+        },
+        {
+          "id": "b90009d1-af7b-4e25-bed9-2702dda70ea9",
+          "number": 3,
+          "question_text": "sad",
+          "answers": [
+            {
+              "number": 0,
+              "title": "asdasd"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20bf1a35-b439-41c6-bb1d-f770745fe9c2",
+      "creator_id": "c5f566d7-f2f2-43ca-808a-65ff1c832f56",
+      "by_invitation": false,
+      "title": "Test",
+      "description": "123",
+      "type": null,
+      "questions": [
+        {
+          "id": "b5446a37-d967-4054-af45-7338d61ae5b3",
+          "number": 0,
+          "question_text": "1",
+          "answers": [
+            {
+              "number": 0,
+              "title": "1"
+            }
+          ]
+        },
+        {
+          "id": "fd0ee15f-c09b-4077-9d3f-a0070161f9a9",
+          "number": 1,
+          "question_text": "2",
+          "answers": [
+            {
+              "number": 0,
+              "title": "2"
+            }
+          ]
+        },
+        {
+          "id": "6c32e723-6910-42ac-9d28-915fdb145f42",
+          "number": 2,
+          "question_text": "sad",
+          "answers": [
+            {
+              "number": 0,
+              "title": "asdasd"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c1e818d0-8566-47cf-8f95-21dc846e94ef",
+      "creator_id": "c5f566d7-f2f2-43ca-808a-65ff1c832f56",
+      "by_invitation": false,
+      "title": "Test",
+      "description": "123",
+      "type": null,
+      "questions": [
+        {
+          "id": "04648093-7110-4823-a3f3-74360875a5de",
+          "number": 0,
+          "question_text": "2",
+          "answers": [
+            {
+              "number": 0,
+              "title": "2"
+            }
+          ]
+        },
+        {
+          "id": "3fe954f6-73cc-44ae-9a58-e288e8181a7a",
+          "number": 1,
+          "question_text": "312",
+          "answers": [
+            {
+              "number": 0,
+              "title": "123123"
+            }
+          ]
+        },
+        {
+          "id": "3a691f23-0adf-4d62-99e1-9bd10dc92d32",
+          "number": 2,
+          "question_text": "sad",
+          "answers": [
+            {
+              "number": 0,
+              "title": "asdasd"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7d60e343-9b14-4368-a9d2-c0930e99bfae",
+      "creator_id": "c5f566d7-f2f2-43ca-808a-65ff1c832f56",
+      "by_invitation": false,
+      "title": "123",
+      "description": "123",
+      "type": null,
+      "questions": [
+        {
+          "id": "2c22f4e9-79d1-453f-a034-e9b186a61f20",
+          "number": 0,
+          "question_text": "123",
+          "answers": [
+            {
+              "number": 0,
+              "title": "123"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f71575e2-3cf1-4c45-aba2-ff82278fcedd",
+      "creator_id": "c5f566d7-f2f2-43ca-808a-65ff1c832f56",
+      "by_invitation": false,
+      "title": "123",
+      "description": "123",
+      "type": null,
+      "questions": [
+        {
+          "id": "61d4f200-6638-4cb7-a0c0-b0c088ae19fb",
+          "number": 0,
+          "question_text": "1",
+          "answers": [
+            {
+              "number": 0,
+              "title": "1"
+            }
+          ]
         }
       ]
     }
   ],
-
   "results": [
     {
       "id": "957db7e1-b2a7-4273-a36c-A7542edc06c3",
@@ -71,19 +366,291 @@
       "type": "default",
       "questions": [
         {
-          "id": "555db7e1-b2a7-4273-a36c-87842edc06c3",
-          "number": 2,
+          "number": 0,
           "question_text": "What is: ?",
-          "isChecked": true
-        },
-        {
-          "id": "555db7e1-b2a7-4273-a36c-87842edc06c3",
-          "number": 2,
-          "question_text": "What is: ?",
-          "isChecked": false
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ],
+          "answer": [
+            1,
+            0
+          ]
         }
       ],
-      "answer": "auto or comment"
+      "comment": "auto or comment"
+    },
+    {
+      "id": "e79487a3-bc3c-46e2-815a-b59a37e5920e",
+      "creator_id": "957db7e1-b2a7-4273-a36c-87842edc06c3",
+      "by_invitation": false,
+      "title": "Test1",
+      "description": "Описание...",
+      "type": "default | psiho",
+      "questions": [
+        {
+          "number": 0,
+          "question_text": "What is: ?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "number": 1,
+          "question_text": "What is12312: ?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "number": 2,
+          "question_text": "Last is12312: ?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        }
+      ],
+      "test_id": "800db7e1-b2a7-4273-a36c-87842edc06c3",
+      "user_id": "c5f566d7-f2f2-43ca-808a-65ff1c832f56"
+    },
+    {
+      "id": "bac12deb-88b6-4d51-a958-c9a55cd8aff8",
+      "creator_id": "957db7e1-b2a7-4273-a36c-87842edc06c3",
+      "by_invitation": true,
+      "title": "Test2",
+      "description": "Описание...",
+      "type": "default | psiho",
+      "questions": [
+        {
+          "number": 0,
+          "question_text": "What is: ?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "number": 1,
+          "question_text": "What is: ?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ]
+        }
+      ],
+      "test_id": "80asd0db7e1-b2a7-4273-a36c-87842edc06c3",
+      "user_id": "c5f566d7-f2f2-43ca-808a-65ff1c832f56"
+    },
+    {
+      "id": "3e73508a-671b-4698-a1ff-7a02731420c6",
+      "creator_id": "957db7e1-b2a7-4273-a36c-87842edc06c3",
+      "by_invitation": false,
+      "title": "Test1",
+      "description": "Описание...",
+      "type": "default | psiho",
+      "questions": [
+        {
+          "number": 0,
+          "question_text": "What is: ?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "number": 1,
+          "question_text": "What is12312: ?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "number": 2,
+          "question_text": "Last is12312: ?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ]
+        }
+      ],
+      "test_id": "800db7e1-b2a7-4273-a36c-87842edc06c3",
+      "user_id": "c5f566d7-f2f2-43ca-808a-65ff1c832f56"
+    },
+    {
+      "id": "1be82430-3eb9-4925-8229-df8a58a66c23",
+      "creator_id": "957db7e1-b2a7-4273-a36c-87842edc06c3",
+      "by_invitation": true,
+      "title": "Test2",
+      "description": "Описание...",
+      "type": "default | psiho",
+      "questions": [
+        {
+          "number": 0,
+          "question_text": "What is: ?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "number": 1,
+          "question_text": "What is: ?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ]
+        }
+      ],
+      "test_id": "80asd0db7e1-b2a7-4273-a36c-87842edc06c3",
+      "user_id": "c5f566d7-f2f2-43ca-808a-65ff1c832f56"
+    },
+    {
+      "id": "b707ed4f-8c02-40db-af43-f353e1a8adcd",
+      "creator_id": "957db7e1-b2a7-4273-a36c-87842edc06c3",
+      "by_invitation": false,
+      "title": "Test1",
+      "description": "Описание...",
+      "type": "default | psiho",
+      "questions": [
+        {
+          "number": 0,
+          "question_text": "What is: ?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ]
+        },
+        {
+          "number": 1,
+          "question_text": "What is12312: ?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "number": 2,
+          "question_text": "Last is12312: ?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "Example"
+            },
+            {
+              "number": 1,
+              "title": "hello w"
+            }
+          ]
+        }
+      ],
+      "test_id": "800db7e1-b2a7-4273-a36c-87842edc06c3",
+      "user_id": "c5f566d7-f2f2-43ca-808a-65ff1c832f56"
     }
   ]
 }

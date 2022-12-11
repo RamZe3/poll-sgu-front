@@ -1,7 +1,7 @@
 import axios from "axios";
 import {useStore} from "vuex";
 import {onMounted, ref} from "vue";
-import {API_URL, USER_API_URL} from "@/common/API";
+import {API_URL, USERS_API_URL} from "@/common/API";
 import {newGuid} from "@/common/GuidLogic";
 
 export function useUser() {
@@ -11,14 +11,14 @@ export function useUser() {
             email: '',
             login: '',
             password: '',
-            role: '',
+            roles: ["user"],
         })
 
     const store = useStore()
 
     const login = async () => {
         //TODO
-        const response = await axios.get(API_URL + USER_API_URL + '/?email=' + user.value.email
+        const response = await axios.get(API_URL + USERS_API_URL + '/?email=' + user.value.email
             + "&password=" + user.value.password);
 
         if (response.data.length === 1) {
@@ -32,14 +32,14 @@ export function useUser() {
             email: '',
             login: '',
             password: '',
-            role: '',
+            roles: ["user"],
         }
     }
 
     const register = async () => {
+        //alert("ASD")
         //TODO
-        const response = await axios.get(API_URL + USER_API_URL + '/?email=' + user.value.email);
-
+        const response = await axios.get(API_URL + USERS_API_URL + '/?email=' + user.value.email);
         if (response.data.length === 0) {
             //const errors = validUser(user.value)
             //if (errors !== ''){
@@ -51,9 +51,11 @@ export function useUser() {
                 email: user.value.email,
                 login: user.value.login,
                 password: user.value.password,
-                role: user.value.role
+                roles: user.value.roles,
+                tests_by_invite:[],
             }
-            await axios.post(API_URL + USER_API_URL + "/", newUser);
+            //alert(newUser)
+            await axios.post(API_URL + USERS_API_URL + "/", newUser);
             await store.dispatch("authentication", newUser)
         } else {
             //store.commit("setErrorMessage", "Пользователь с номером телефона уже существует")
@@ -64,8 +66,10 @@ export function useUser() {
             email: '',
             login: '',
             password: '',
-            role: '',
+            roles: [],
         }
+
+        //alert("ASD")
     }
 
     const signOut = async () => {
@@ -77,13 +81,13 @@ export function useUser() {
     }
 
     const getLoginByID = async (id) => {
-        const response = await axios.get(API_URL + USER_API_URL + '/?id=' + id);
+        const response = await axios.get(API_URL + USERS_API_URL + '/?id=' + id);
         return response.data[0]
     }
 
     onMounted(checkAuth)
 
     return {
-        register, login, signOut, getLoginByID
+        register, login, signOut, getLoginByID, user, checkAuth
     }
 }

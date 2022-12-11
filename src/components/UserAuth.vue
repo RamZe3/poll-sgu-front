@@ -10,14 +10,18 @@
                     </button>
                     <div class="px-6 py-6 lg:px-8">
                         <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Войдите в аккуант</h3>
-                        <form class="space-y-6" action="#">
+                        <form @submit="submitL" class="space-y-6">
                             <div>
                                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required>
+                                <input :value="user.email"
+                                       @input="event => user.email = event.target.value"
+                                       type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required>
                             </div>
                             <div>
                                 <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Пароль</label>
-                                <input type="password" minlength=4 name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                                <input :value="user.password"
+                                       @input="event => user.password = event.target.value"
+                                       type="password" minlength=4 name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                             </div>
                             <div class="flex justify-between">
                                 <div class="flex items-start">
@@ -30,7 +34,7 @@
                             </div>
                             <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Войти</button>
                             <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                                Не зарегистрированы? <button @click="register" class="text-blue-700 hover:underline dark:text-blue-500">Создать аккуант</button>
+                                Не зарегистрированы? <button @click="registerV" class="text-blue-700 hover:underline dark:text-blue-500">Создать аккуант</button>
                             </div>
                         </form>
                     </div>
@@ -48,18 +52,24 @@
                     </button>
                     <div class="px-6 py-6 lg:px-8">
                         <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Зарегистрируйтесь</h3>
-                        <form class="space-y-6" action="#">
+                        <form @submit="submitR" class="space-y-6">
                             <div>
                                 <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Имя</label>
-                                <input type="name" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Введите имя" required>
+                                <input :value="user.login"
+                                       @input="event => user.login = event.target.value"
+                                       type="name" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Введите имя" required>
                             </div>
                             <div>
                                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required>
+                                <input :value="user.email"
+                                       @input="event => user.email = event.target.value"
+                                       type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required>
                             </div>
                             <div>
                                 <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Пароль</label>
-                                <input type="password" minlength=4 name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                                <input :value="user.password"
+                                       @input="event => user.password = event.target.value"
+                                       type="password" minlength=4 name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                             </div>
                             <div>
                                 <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Подтвердите пароль</label>
@@ -68,22 +78,25 @@
                             <div class="flex justify-between">
                                 <div class="flex items-start">
                                     <div class="flex items-center h-5">
-                                        <input id="adminuser" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800">
+                                        <input v-model="user.roles"
+                                               id="adminuser" type="checkbox" value="creator" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800">
                                     </div>
                                     <label for="adminuser" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Я создатель тестов</label>
                                 </div>
                             </div>
-                            <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Зарегистрироваться</button>
+                            <button  type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Зарегистрироваться</button>
                         </form>
                     </div>
                 </div>
             </div>
-        </div> 
-    
+        </div>
 
 </template>
 
 <script>
+
+import {useUser} from "@/hooks/useUser";
+import {ref} from "vue";
 
 export default {
     name: "user-auth-modal",
@@ -92,13 +105,13 @@ export default {
             type: Boolean
         }
     },
-    data: () =>{
-        return {
-            isRegisterButtonIsPressed: false
-        }
-    },
+    //data: () =>{
+    //    return {
+    //        isRegisterButtonIsPressed: false
+    //    }
+    //},
     methods:{
-        register(){
+        registerV(){
             this.isRegisterButtonIsPressed = !this.isRegisterButtonIsPressed;
             this.$emit("update:isVisible", false);
         },
@@ -110,7 +123,25 @@ export default {
         closeAllForms(){
             this.isRegisterButtonIsPressed = !this.isRegisterButtonIsPressed
             this.$emit("update:isVisible", false);
-        }
+        },
+
+      submitR(event) {
+          this.register()
+        event.preventDefault()
+        this.registerV()
+        this.checkAuth()
+      },
+      submitL(event) {
+        this.login()
+        event.preventDefault()
+        this.closeLoginForm()
+        this.checkAuth()
+      }
+    },
+    setup(){
+      const isRegisterButtonIsPressed = ref(false)
+      const {user, checkAuth, signOut, register, login} = useUser()
+      return {user, checkAuth, signOut, register, login, isRegisterButtonIsPressed}
     }
 }
 </script>
