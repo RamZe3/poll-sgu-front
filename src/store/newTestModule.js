@@ -10,6 +10,7 @@ export const newTestModule = {
             by_invitation: false,
             title: null,
             description: null,
+            //type: Psiho, Default
             type: null,
             questions: [
                 {
@@ -25,6 +26,15 @@ export const newTestModule = {
                 },
             ]
         },
+        ballings: [
+            {
+                id: null,
+                number: 0,
+                minValue: null,
+                maxValue: null,
+                answer: '',
+            }
+        ],
         count: 1,
         answersCount: 0,
     }),
@@ -54,6 +64,38 @@ export const newTestModule = {
         },
         setAnswerTitle(state, {testIndex , index, title}) {
             state.newTest.questions[testIndex].answers[index].title = title
+        },
+        setType(state, type){
+            console.log(type)
+            //state.newTest.type = type
+            state.count = 1
+            state.answersCount = 0
+            state.newTest = {
+                id: null,
+                creator_id: null,
+                by_invitation: false,
+                title: null,
+                description: null,
+                type: type,
+                questions: [
+                    {
+                        id: null,
+                        number: 0,
+                        question_text: "",
+                        answers: [
+                            {
+                                "number": 0,
+                                "title": ""
+                            },
+                        ],
+                    },
+                ]
+            }
+        },
+
+        //for psyho
+        setAnswerValue(state, {testIndex , index, value}) {
+            state.newTest.questions[testIndex].answers[index].value = value
         },
 
         addNewQuestion(state, index){
@@ -119,6 +161,34 @@ export const newTestModule = {
         deleteAnswer(state, testIndex){
             state.newTest.questions[testIndex].answers.pop()
         },
+
+
+        //for psyho
+        addBallingMinValue(state, {index ,min}){
+            state.ballings[index].minValue = min
+        },
+        addBallingMaxValue(state, {index ,max}){
+            state.ballings[index].maxValue = max
+        },
+        addBallingAnswer(state, {index ,answer}){
+            state.ballings[index].answer = answer
+        },
+
+        addBalling(state){
+            state.ballings.push(
+                {
+                    id: null,
+                    number: state.ballings.length,
+                    minValue: null,
+                    maxValue: null,
+                    answer: '',
+                })
+        },
+        deleteBalling(state){
+            state.ballings.pop()
+        },
+
+
     },
 
     actions: {
@@ -133,6 +203,10 @@ export const newTestModule = {
                 addTest.questions[i].id = newGuid()
                 addTest.questions[i].number = count
                 count++;
+            }
+
+            if (addTest.type === "Psiho"){
+                addTest.ballings = context.state.ballings
             }
 
             await axios.post(API_URL + TESTS_API_URL + "/", context.state.newTest);

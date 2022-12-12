@@ -21,8 +21,9 @@ export function useUser() {
         const response = await axios.get(API_URL + USERS_API_URL + '/?email=' + user.value.email
             + "&password=" + user.value.password);
 
+        console.log(user.value)
         if (response.data.length === 1) {
-            await store.dispatch("authentication", user)
+            await store.dispatch("authentication", response.data[0])
         } else {
             //store.commit("setErrorMessage", "Неверно указан логин или пароль")
         }

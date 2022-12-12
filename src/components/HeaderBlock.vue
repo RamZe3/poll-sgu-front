@@ -14,12 +14,12 @@
           <li class="flex justify-center items-center "><router-link to="/createtest" class="font-sans hover:text-blue-700 hover:underline" aria-current="page">Создать тест</router-link></li>
           <li class="flex justify-center items-center "><router-link to="/myowntests" class="font-sans hover:text-blue-700 hover:underline" aria-current="page">Мои тесты</router-link></li>
           
-          <li class="flex justify-center items-center "><login-button @click="toggleElement"></login-button></li>
+          <li v-show="!this.$store.getters.ISAUTH" class="flex justify-center items-center "><login-button @click="toggleElement"></login-button></li>
           
           <!-- отображение имени и кнопки выйти, если вошли: -->
-          <li class="flex flex-col justify-center items-center ">
-            <div class="font-sans">Андрей</div>
-            <exit-button @click="exitUser"></exit-button>
+          <li v-show="this.$store.getters.ISAUTH" class="flex flex-col justify-center items-center ">
+            <div class="font-sans">{{ this.$store.getters.LOGIN }}</div>
+            <exit-button @click="this.$store.dispatch('signOut')"></exit-button>
           </li>
         </ul>
       </nav>

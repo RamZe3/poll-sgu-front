@@ -57,8 +57,9 @@ export const testModule = {
             const response1 = await axios.get(API_URL + USERS_API_URL + '/?id=' + sessionStorage.getItem("UserID"));
             const response2 = await axios.get(API_URL + TESTS_API_URL);
 
-            const userTestsId = response1.data[0].tests_by_invite
             console.log(response1.data[0])
+            const userTestsId = response1.data[0].tests_by_invite
+
             const allTest = response2.data
 
             allTest.forEach(function (item){

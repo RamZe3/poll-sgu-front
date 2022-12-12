@@ -22,7 +22,7 @@
                   <p class="font-bold">Выберите тип теста</p>
                   <div class="my-3">
                     <div v-for="(type, index) in typesOfTests" :key="index">
-                      <input @input="testType = type" id="typeOfTestRadio" type="radio" name="field">
+                      <input checked @input="setType(type)" id="typeOfTestRadio" type="radio" name="field">
                       <label for="private-typeOfTestRadio-not" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">{{ type }}</label>
                     </div>
                   </div>
@@ -44,7 +44,7 @@
                         </div>
                         <hr>
                         <div class="flex flex-col my-3" v-for="(answer) in question.answers" v-bind:key="answer.number">
-                          <div v-if="testType == 'Psiho'"> 
+                          <div v-if="testType == 'Psiho'">
                             <div class="flex">
                               <p class="w-4/5 mr-3">Введите вариант ответа</p>
                               <p class="w-1/5">Баллы за ответ</p>
@@ -55,8 +55,8 @@
                                   @input="event => this.$store.commit('setAnswerTitle', {testIndex: index, index:answer.number, title: event.target.value})"
                                   type="text" class="w-4/5 mr-3 rounded-lg bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                               <input required
-                                  :value="answer.title"
-                                  @input="event => this.$store.commit('setAnswerTitle', {testIndex: index, index:answer.number, title: event.target.value})"
+                                  :value="answer.value"
+                                  @input="event => this.$store.commit('setAnswerValue', {testIndex: index, index:answer.number, value: event.target.value})"
                                   type="text" class="w-1/5 rounded-lg bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                             </div>
                           </div>
@@ -73,7 +73,7 @@
                           </div>
                         </div>
                         <div class="flex justify-around my-3">
-                          <button @click="this.$store.commit('deleteAnswer', index)" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
+                          <button v-if="question.answers.length > 1" @click="this.$store.commit('deleteAnswer', index)" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
                             <p>Удалить вариант ответа</p>
                           </button>
                           <button @click="this.$store.commit('addNewAnswer', index)" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
@@ -114,23 +114,29 @@
                     </div>
                     <hr>  
                     
-                    <div v-for="(resultType, index) in resultTypes" :key="index" class="flex my-3">
+                    <div v-for="(balling, index) in ballings" :key="index" class="flex my-3">
                         <div class="w-1/6 flex justify-center">
-                          <input type="text" class="w-3/4 rounded-lg bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          <input :value="ballings[index].minValue"
+                                 @input="event => this.$store.commit('addBallingMinValue', {index: index, min: event.target.value})"
+                                 type="number" class="w-3/4 rounded-lg bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         </div>
                         <div class="w-1/6 flex justify-center">
-                          <input type="text" class="w-3/4 rounded-lg bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          <input :value="ballings[index].maxValue"
+                                 @input="event => this.$store.commit('addBallingMaxValue', {index: index, max: event.target.value})"
+                                 type="number" class="w-3/4 rounded-lg bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         </div>
                         <div class="w-4/6 flex justify-center">
-                          <input type="text" class="w-full rounded-lg bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          <input :value="ballings[index].answer"
+                                 @input="event => this.$store.commit('addBallingAnswer', {index: index, answer: event.target.value})"
+                                 type="text" class="w-full rounded-lg bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         </div>
                     </div>
 
                     <div class="flex justify-around my-3">
-                      <button @click="this.resultTypes.push(null)" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
+                      <button v-if="ballings.length > 1" @click="this.$store.commit('deleteBalling')" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
                             <p>Удалить разбаловку</p>
                       </button>
-                      <button @click="this.resultTypes.push(null)" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
+                      <button @click="this.$store.commit('addBalling')" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
                             <p>Добавить разбаловку</p>
                       </button>
                     </div>
@@ -168,13 +174,21 @@ export default {
     },
     methods:{
       addTest(event) {
-        //this.$store.dispatch("addNewTest")
+        this.$store.dispatch("addNewTest")
         this.$router.push('/tests')
         event.preventDefault()
       },
+      setType(type){
+        this.$store.commit('setType', type)
+        this.testType = type
+      }
     },
+  mounted() {
+      this.setType("Default")
+  },
   computed: mapState({
     newTest: state => state.newTestM.newTest,
+    ballings: state => state.newTestM.ballings,
     count: state => state.newTestM.count
   }),
 }

@@ -1,5 +1,6 @@
 import axios from "axios";
 import {API_URL, RESULTS_API_URL} from "@/common/API";
+import {getPsyhoResult} from "@/common/psyhoTestLogic";
 
 export const resultTestModule = {
     state: () => ({
@@ -45,7 +46,10 @@ export const resultTestModule = {
                 if (item.user_id === sessionStorage.getItem("UserID")){
                     getResults.push(item)
                 }
-                if (context.state.roles === "creator" && item.creator_id === sessionStorage.getItem("UserID")){
+                //TODO переделать
+                //console.log(context.state.roles.include("creator"))
+                //if (context.state.roles.indexOf("creator") >0 && item.creator_id === sessionStorage.getItem("UserID")){
+                if (item.creator_id === sessionStorage.getItem("UserID")){
                     getResults.push(item)
                 }
             })
@@ -58,6 +62,11 @@ export const resultTestModule = {
         setActiveResult : async (context, id) => {
             //TODO мб неправильно
             const cResult = context.state.results.find(el => el.id === id)
+
+            console.log(cResult.questions)
+            if (cResult.type === "Psiho"){
+                cResult.comment = getPsyhoResult(cResult)
+            }
 
             context.commit("setActiveResult", cResult)
         },
