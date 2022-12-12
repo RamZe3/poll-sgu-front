@@ -14,10 +14,11 @@
                                 <p class="flex items-center">{{result.title}}</p>
                             </div>
                             <div class="w-1/2 flex justify-end">
-                                 <button class="group relative flex justify-center items-center text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-                                    <router-link to="/tests/result"
-                                    @click="this.$store.dispatch('setActiveResult', result.id)"><p class="px-4">Посмотреть результат</p></router-link>
-                                </button>
+                                <router-link to="/tests/result" @click="this.$store.dispatch('setActiveResult', result.id)">
+                                    <button class="group relative flex justify-center items-center text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+                                        <p class="px-4">Посмотреть результат</p>
+                                    </button>
+                                </router-link>
                             </div>
                         </div>
 

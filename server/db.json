@@ -36,6 +36,16 @@
         "user"
       ],
       "tests_by_invite": []
+    },
+    {
+      "id": "d3816d48-c687-4919-823e-eae91f01698b",
+      "email": "nam@fff.com",
+      "login": "пахан",
+      "password": "1234",
+      "roles": [
+        "user"
+      ],
+      "tests_by_invite": []
     }
   ],
   "tests": [
