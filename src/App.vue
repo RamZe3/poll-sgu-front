@@ -1,7 +1,5 @@
 <template>
-  <HeaderBlock></HeaderBlock>
   <router-view/>
-  <FooterBlock></FooterBlock>
 </template>
 
 <style>
@@ -10,16 +8,24 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   background: linear-gradient(115deg, rgba(240,245,229,1) 0%, rgba(242,241,223,1) 55%, rgba(230,224,209,1) 100%);
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
 }
 
 nav a.router-link-exact-active {
   color: #8b9bf5;
 }
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
 </style>
