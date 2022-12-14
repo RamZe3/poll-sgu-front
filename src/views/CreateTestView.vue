@@ -1,8 +1,8 @@
 <template>
-    <div class="test-form">
+    <div class="test-form min-h-screen">
         <HeaderBlock></HeaderBlock>
         <CreateTest></CreateTest>
-        <FooterBlock></FooterBlock>
+        <FooterBlock class="sticky top-[100vh]"></FooterBlock>
     </div>
 </template>
   
@@ -11,8 +11,6 @@
 import HeaderBlock from '@/components/HeaderBlock.vue'
 import CreateTest from '@/components/CreateTest.vue'
 import FooterBlock from '@/components/FooterBlock.vue'
-
-document.title = 'Создать тест';
 
 export default {
 name: 'CreateTestView',

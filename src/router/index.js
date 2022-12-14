@@ -5,7 +5,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
   },
   {
     path: '/myowntests',
@@ -38,9 +38,9 @@ const routes = [
     component: () => import('../views/ResultListView.vue')
   },
   {
-    path: '/tests/result',
+    path: '/results/result',
     name: 'result',
-    component: () => import('../views/ResultView.vue')
+    component: () => import('../views/ResultView.vue'),
   }
 ]
 

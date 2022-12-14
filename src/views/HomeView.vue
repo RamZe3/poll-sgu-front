@@ -1,8 +1,8 @@
 <template>
-  <div class="home">
+  <div class="home min-h-screen">
       <HeaderBlock></HeaderBlock>
       <WelcomeSection></WelcomeSection>
-      <FooterBlock></FooterBlock>
+      <FooterBlock class="sticky top-[100vh]"></FooterBlock>
   </div>
 </template>
 
@@ -11,8 +11,6 @@
 import HeaderBlock from '@/components/HeaderBlock.vue'
 import WelcomeSection from '@/components/WelcomeSection.vue'
 import FooterBlock from '@/components/FooterBlock.vue'
-
-document.title = 'Главная';
 
 export default {
   name: 'HomeView',

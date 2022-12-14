@@ -85,8 +85,6 @@
 <script>
 import {mapState} from "vuex";
 
-document.title = 'Результат теста';
-
 export default {
     name: "result-form",
   computed: mapState({
