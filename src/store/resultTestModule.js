@@ -37,46 +37,32 @@ export const resultTestModule = {
     actions: {
         getResults : async (context) => {
             let getResults = []
-            //const response1 = await axios.get(API_URL + USER_API_URL + '/?id=' + sessionStorage.getItem("UserID"));
-            const response2 = await axios.get(API_URL + RESULTS_API_URL);
-            //const userTestsId = response1.data[0].test_by_invite
-            const allResults = response2.data
+
+            const resultResponse = await axios.get(API_URL + RESULTS_API_URL);
+            const allResults = resultResponse.data
 
             allResults.forEach(function (item){
                 if (item.user_id === sessionStorage.getItem("UserID")){
                     getResults.push(item)
                 }
                 //TODO переделать
-                //console.log(context.state.roles.include("creator"))
-                //if (context.state.roles.indexOf("creator") >0 && item.creator_id === sessionStorage.getItem("UserID")){
-                if (item.creator_id === sessionStorage.getItem("UserID")){
+                else if (item.creator_id === sessionStorage.getItem("UserID")){
                     getResults.push(item)
                 }
             })
 
-            //alert(response2.data.length)
             context.commit("setResults", getResults)
 
         },
 
         setActiveResult : async (context, id) => {
-            //TODO мб неправильно
             const cResult = context.state.results.find(el => el.id === id)
 
-            console.log(cResult.questions)
             if (cResult.type === "Psiho"){
                 cResult.comment = getPsyhoResult(cResult)
             }
 
             context.commit("setActiveResult", cResult)
-        },
-
-        //For creator
-        addComment: async (context, comment) => {
-            //TODO мб неправильно
-            context.state.activeResult.comment = comment
-            await axios.put(API_URL + RESULTS_API_URL + "/?id=" + context.state.activeResult.id,
-                {...context.state.activeResult, comment: comment})
         },
     }
 }

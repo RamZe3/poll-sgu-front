@@ -3,7 +3,7 @@ import {globalModule} from "@/store/globalModule";
 import {testModule} from "@/store/testModule";
 import {resultTestModule} from "@/store/resultTestModule";
 import {newTestModule} from "@/store/newTestModule";
-import {creatorResultTestModule} from "@/store/creatorResultTestModule";
+import {creatorResultModule} from "@/store/creatorResultModule";
 
 export default createStore({
   modules: {
@@ -11,6 +11,6 @@ export default createStore({
     testM: testModule,
     resultM: resultTestModule,
     newTestM: newTestModule,
-    creatorM: creatorResultTestModule
+    creatorM: creatorResultModule
   }
 })

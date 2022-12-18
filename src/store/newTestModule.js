@@ -10,6 +10,7 @@ export const newTestModule = {
             by_invitation: false,
             title: null,
             description: null,
+
             //type: Psiho, Default
             type: null,
             questions: [
@@ -58,7 +59,6 @@ export const newTestModule = {
         setNewQuestions(state, questions){
             state.newTest.questions = questions
         },
-
         setQuestionTitle(state, {index, title}) {
             state.newTest.questions[index].question_text = title
         },
@@ -66,8 +66,6 @@ export const newTestModule = {
             state.newTest.questions[testIndex].answers[index].title = title
         },
         setType(state, type){
-            console.log(type)
-            //state.newTest.type = type
             state.count = 1
             state.answersCount = 0
             state.newTest = {
@@ -100,7 +98,6 @@ export const newTestModule = {
 
         addNewQuestion(state, index){
             //TODO фигово работает если шалить
-            //alert(number)
             state.count++;
             state.newTest.questions.splice(index+1, 0, {
                 id: null,
@@ -114,43 +111,17 @@ export const newTestModule = {
                 ],
             })
             this.commit("setNewQuestions", state.newTest.questions)
-            //state.newTest.questions.push(
-            //    {
-            //        id: null,
-            //        number: state.count -1,
-            //        question_text: "",
-            //        answers: [
-            //            {
-            //                "number": 0,
-            //                "title": ""
-            //            },
-            //        ],
-            //    })
         },
+
         deleteQuestion(state, index){
-            //TODO
-            //state.newTest.questions = state.newTest.questions.filter(function (el){
-            //    return el.number !== number
-            //})
+            //TODO логика с порядком
             state.newTest.questions.splice(index, 1)
             this.commit("setNewQuestions", state.newTest.questions)
 
             state.count--;
-            //for (let i =0; i < state.count; i++ ){
-            //    state.newTest.questions[i].number = i
-            //    //this.commit('setNumber', {
-            //    //    lastNumber: state.newTest.questions[i].number,
-            //    //    newNumber: i
-            //    //})
-            //}
         },
 
         addNewAnswer(state, testIndex){
-            //state.newTest.questions[testIndex].answers.splice(index+1, 0, {
-            //            "number": null,
-            //            "title": ""
-            //        })
-
             state.newTest.questions[testIndex].answers.push(
                 {
                     "number": state.newTest.questions[testIndex].answers.length,
@@ -184,6 +155,7 @@ export const newTestModule = {
                     answer: '',
                 })
         },
+
         deleteBalling(state){
             state.ballings.pop()
         },

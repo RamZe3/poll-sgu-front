@@ -43,18 +43,18 @@ export const globalModule = {
             }
         },
 
-        authentication: (context, user) => {
+        authentication: async (context, user) => {
             sessionStorage.setItem("UserID", user.id)
             sessionStorage.setItem("Login", user.login)
             sessionStorage.setItem("Roles", user.roles)
-            context.commit("setIsAuth", true)
+            await context.dispatch("checkAuth")
         },
 
-        signOut: (context) => {
+        signOut: async (context) => {
             sessionStorage.removeItem("UserID")
             sessionStorage.removeItem("Login")
             sessionStorage.removeItem("Roles")
-            context.commit("setIsAuth", false)
+            await context.dispatch("checkAuth")
         }
     },
 }

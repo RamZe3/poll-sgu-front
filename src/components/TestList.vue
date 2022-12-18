@@ -69,7 +69,7 @@ export default {
     },
     methods:{
         addTest(){
-          this.$store.dispatch("addTestByInvation", this.testId)
+          this.$store.dispatch("addTestByInviting", this.testId)
             if (this.testId.length === 0)
                 alert('Введите код')
         }

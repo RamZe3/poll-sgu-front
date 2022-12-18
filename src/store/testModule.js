@@ -16,7 +16,6 @@ export const testModule = {
         TESTS: state => {
             return state.tests
         },
-
         ACTIVETEST: state => {
             return state.activeTest
         },
@@ -40,27 +39,25 @@ export const testModule = {
         setQuestion(state, questionN){
             state.currentQuestionAT = questionN
         },
+        setQuectionsCount(state, count){
+            state.questionsCount = count
+        },
 
         //for currentQuestion
         setAnswer(state, answer){
             state.activeTest.questions[state.currentQuestionAT].answer = [answer]
         },
-
-        setQuectionsCount(state, count){
-            state.questionsCount = count
-        }
     },
 
     actions: {
         getTests : async (context) => {
             let getTests = []
-            const response1 = await axios.get(API_URL + USERS_API_URL + '/?id=' + sessionStorage.getItem("UserID"));
-            const response2 = await axios.get(API_URL + TESTS_API_URL);
 
-            console.log(response1.data[0])
-            const userTestsId = response1.data[0].tests_by_invite
+            const userResponse = await axios.get(API_URL + USERS_API_URL + '/?id=' + sessionStorage.getItem("UserID"));
+            const testsResponse = await axios.get(API_URL + TESTS_API_URL);
 
-            const allTest = response2.data
+            const userTestsId = userResponse.data[0].tests_by_invite
+            const allTest = testsResponse.data
 
             allTest.forEach(function (item){
                 if (!item.by_invitation || userTestsId.includes(item.id)){
@@ -71,7 +68,7 @@ export const testModule = {
             context.commit("setTests", getTests)
         },
 
-        addTestByInvation: async (context, code) => {
+        addTestByInviting: async (context, code) => {
             const response = await axios.get(API_URL + TESTS_API_URL + "/?id=", code);
             if (response.data[0] !== null){
                 let user = (await axios.get(API_URL + USERS_API_URL + '/?id=' + sessionStorage.getItem("UserID"))).data[0];
@@ -84,7 +81,6 @@ export const testModule = {
         },
 
         setActiveTestById : async (context, id) => {
-            //TODO мб неправильно
             const cTest = context.state.tests.find(el => el.id === id)
 
             context.commit("setActiveTest", cTest)
