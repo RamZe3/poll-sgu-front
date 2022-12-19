@@ -1,6 +1,7 @@
-import {newGuid} from "@/common/GuidLogic";
+import {newGuid, shortNewGuid} from "@/common/GuidLogic";
 import {API_URL, TESTS_API_URL} from "@/common/API";
 import axios from "axios";
+import moment from "moment";
 
 export const newTestModule = {
     state: () => ({
@@ -87,7 +88,7 @@ export const newTestModule = {
                             },
                         ],
                     },
-                ]
+                ],
             }
         },
 
@@ -169,6 +170,10 @@ export const newTestModule = {
 
             addTest.id = newGuid()
             addTest.creator_id = sessionStorage.getItem("UserID")
+            addTest.date_of_passage = moment().format("YYYY-MM-DD HH:mm")
+            if (addTest.by_invitation){
+                addTest.invitation_key = shortNewGuid()
+            }
 
             let count = 0;
             for (let i = 0; i < addTest.questions.length; i++){

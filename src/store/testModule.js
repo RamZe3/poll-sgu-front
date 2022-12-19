@@ -63,21 +63,26 @@ export const testModule = {
                 if (!item.by_invitation || userTestsId.includes(item.id)){
                     getTests.push(item)
                 }
+                else if (item.creator_id === sessionStorage.getItem("UserID")){
+                    getTests.push(item)
+                }
             })
 
             context.commit("setTests", getTests)
         },
 
         addTestByInviting: async (context, code) => {
-            const response = await axios.get(API_URL + TESTS_API_URL + "/?id=", code);
-            if (response.data[0] !== null){
+            const response = await axios.get(API_URL + TESTS_API_URL + "/?invitation_key=" + code);
+            //console.log(response.data[0])
+            //console.log(code)
+            if (response.data[0] !== undefined){
+
                 let user = (await axios.get(API_URL + USERS_API_URL + '/?id=' + sessionStorage.getItem("UserID"))).data[0];
-                user.tests_by_invite.push(code)
+                user.tests_by_invite.push(response.data[0].id)
 
                 await axios.put(API_URL + USERS_API_URL + "/" + user.id, user);
                 await context.dispatch("getTests")
             }
-            //TODO ошибки и что тест уже добавлен
         },
 
         setActiveTestById : async (context, id) => {

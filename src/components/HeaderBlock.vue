@@ -12,7 +12,7 @@
           <li class="flex justify-center items-center "><router-link to="/" class="text-xl md:text-base font-sans font-bold hover:text-blue-700" aria-current="page">Главная</router-link></li>
           <li class="flex justify-center items-center "><router-link to="/tests" class="text-xl md:text-base font-sans font-bold hover:text-blue-700" aria-current="page">Тесты</router-link></li>
           <li class="flex justify-center items-center "><router-link to="/results" class="text-xl md:text-base font-sans font-bold hover:text-blue-700" aria-current="page">Результаты</router-link></li>
-          <li class="flex justify-center items-center "><router-link to="/myowntests" class="text-xl md:text-base font-sans font-bold hover:text-blue-700" aria-current="page">Мои тесты</router-link></li>
+          <li v-if="this.$store.getters.ROLES.includes('creator')" class="flex justify-center items-center "><router-link to="/myowntests" class="text-xl md:text-base font-sans font-bold hover:text-blue-700" aria-current="page">Мои тесты</router-link></li>
           
           <li v-show="!this.$store.getters.ISAUTH" class="flex justify-center items-center "><login-button @click="toggleElement"></login-button></li>
           

@@ -7,7 +7,7 @@
                     <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                     <router-link to="/createtest" class="p-2 font-bold text-lg" aria-current="page">Создать новый тест</router-link>
                 </button>
-                <div class="justify-center shadow-lg border-gray-300 border-2 p-[20px] w-full bg-blue-50 rounded-3xl">
+                <div v-if="userResultsM.size > 0" class="justify-center shadow-lg border-gray-300 border-2 p-[20px] w-full bg-blue-50 rounded-3xl">
                     <div class="my-6">
                         <p class="font-bold text-2xl">Результаты ваших созданных тестов</p>
                     </div>
@@ -18,7 +18,7 @@
                         </div>
                         <div class="w-3/4 flex justify-center">
                             <p class="w-1/5 flex justify-center font-bold items-center">Прошедшие тест</p>
-                            <!-- доделать хидден -->
+                            <!--TODO доделать хидден -->
                             <p class="w-3/5 flex justify-center font-bold items-center md:hidden">ID теста</p>
                             <p class="w-1/5 flex justify-center font-bold items-center md:hidden">Управление</p>
                         </div>
@@ -31,20 +31,29 @@
                             </div>
                             <div class="w-3/4 flex justify-between">
                                 <div class="w-1/5 flex justify-center">
-                                    <button @click="(opened[index] = !opened[index])" class="relative flex justify-center items-center text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
+                                    <button @click="open(index)" class="relative flex justify-center items-center text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
                                         <p class="px-4">Посмотреть</p>
-                                        <div v-if="opened[index]" class="absolute z-10 top-full w-full bg-white shadow-md mt-1 rounded">
+                                        <div v-if="opened[index] && value.length > 0" class="absolute z-10 top-full w-full bg-white shadow-md mt-1 rounded">
                                             <div v-for="(user) in value" v-bind:key="user" class="w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                                                <router-link to="/myowntests/result" class="z-20 block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white">
+                                                <button @click="setUserResultById(key, user)" to="/myowntests/result" class="z-20 block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white">
                                                     {{ this.getLoginById(user) }}
-                                                </router-link>
+                                                </button>
                                             </div>
                                         </div>
+
+<!--                                      TODO Паше сделать как в результатах подпись по кнопкой-->
+                                      <div v-else-if="opened[index]" class="absolute z-10 top-full w-full bg-white shadow-md mt-1 rounded">
+                                        <div  class="w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                                          <div class="z-20 block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white">
+                                            Никто не прошел тест...
+                                          </div>
+                                        </div>
+                                      </div>
                                     </button>
                                 </div>
                                 <div class="w-3/5 flex justify-center md:hidden">
                                     <p class="w-3/4 relative flex justify-center items-center text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
-                                        {{ key }}
+                                        {{ getInvitationKeyById(key) }}
                                     </p>
                                 </div>
                                 <div class="w-1/5 flex justify-center items-center">
@@ -76,10 +85,10 @@ export default {
         return {
           users: [],
             opened: [false, false, false],
-            tests: [
-                {title: "Шахматы", usersAnswered: ["Коля", "Вася", "Петя"]},
-                {title: "Футбол", usersAnswered: ["Вася", "Дима", "Петя"]},
-            ]
+            // tests: [
+            //     {title: "Шахматы", usersAnswered: ["Коля", "Вася", "Петя"]},
+            //     {title: "Футбол", usersAnswered: ["Вася", "Дима", "Петя"]},
+            // ]
         }
 	},
   async created() {
@@ -87,6 +96,12 @@ export default {
     this.users = response.data
   },
   methods:{
+
+        open(index){
+          let bool = this.opened[index]
+          this.opened.splice(0, this.opened.length, false)
+          this.opened[index] = !bool
+        },
         addTest(n){
             this.tests.push(n)
         },
@@ -96,7 +111,31 @@ export default {
         },
 
         getResultById(id){
-          return  this.results.find(el => el.test_id === id).title
+          //TODO баз при прохождении теста и поиска его в результатах
+          console.log(this.$store.getters.TESTS.find(el => el.id === id).title)
+          console.log(id)
+          return  this.$store.getters.TESTS.find(el => el.id === id).title
+        },
+
+    getInvitationKeyById(id){
+      //TODO баз при прохождении теста и поиска его в результатах
+      console.log(this.$store.getters.TESTS.find(el => el.id === id).title)
+      console.log(this.$store.getters.TESTS.find(el => el.id === id).invitation_key)
+      const answer = this.$store.getters.TESTS.find(el => el.id === id).invitation_key
+      //TODO уникальный класс без ключа
+      if (answer !== undefined){
+        return  answer
+      }
+      else{
+        return "Тест без приглашения..."
+      }
+    },
+        setUserResultById(test_id, user_id){
+          // console.log(user_id)
+          let uResult = this.$store.getters.USERSRESULTS.find(el => el.test_id === test_id && el.user_id === user_id)
+          // console.log(uResult)
+          this.$store.commit("setActiveUserResult", uResult)
+          this.$router.push('/myowntests/result')
         },
         getLoginById(id){
           return  this.users.find(el => el.id === id).login
@@ -108,6 +147,7 @@ export default {
   }),
   mounted() {
       this.$store.dispatch("getUsersResult")
+      this.$store.dispatch("getTests")
   }
 }
 </script>

@@ -1,5 +1,5 @@
 import axios from "axios";
-import {API_URL, RESULTS_API_URL} from "@/common/API";
+import {API_URL, RESULTS_API_URL, TESTS_API_URL} from "@/common/API";
 import {getPsyhoResult} from "@/common/psyhoTestLogic";
 
 export const creatorResultModule = {
@@ -34,22 +34,28 @@ export const creatorResultModule = {
             state.usersResultsModel = resultsModel
         },
 
-        setActiveResult(state, activeResult){
+        setActiveUserResult(state, activeResult){
             state.activeUserResult = activeResult
         },
 
-        addAnswerForAR(state, activeResult){
-            state.activeResult = activeResult
+        addAnswerForAR(state, comment){
+            state.activeUserResult.comment = comment
         },
     },
 
     actions: {
         getUsersResult: async (context) => {
+            //TODO Если нет результатов (тестов)
             let getResults = []
             const resultsResponse = await axios.get(API_URL + RESULTS_API_URL);
+            const testResponse = await axios.get(API_URL + TESTS_API_URL +
+                "/?creator_id=" + sessionStorage.getItem("UserID"));
 
             const allResults = resultsResponse.data
             let res = new Map()
+            for (const item of testResponse.data){
+                res.set(item.id, [])
+            }
 
             for (const item of allResults) {
                             if (item.creator_id === sessionStorage.getItem("UserID")){
@@ -80,11 +86,11 @@ export const creatorResultModule = {
         },
 
         //For creator
-        addComment: async (context, comment) => {
-            //TODO мб неправильно
-            context.state.activeResult.comment = comment
-            await axios.put(API_URL + RESULTS_API_URL + "/?id=" + context.state.activeResult.id,
-                {...context.state.activeResult, comment: comment})
+        addComment: async (context) => {
+            //TODO put не работает
+            //context.state.activeResult.comment = comment
+            await axios.put(API_URL + RESULTS_API_URL + "/" + context.state.activeUserResult.id,
+                context.state.activeUserResult)
         },
     }
 }
