@@ -1,7 +1,6 @@
 export const globalModule = {
     state: () => ({
         isAuth: false,
-        //errorMessage: null,
         login: null,
         roles: [],
     }),

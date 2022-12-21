@@ -1,6 +1,7 @@
 import axios from "axios";
 import {API_URL, RESULTS_API_URL, TESTS_API_URL, USERS_API_URL} from "@/common/API";
 import {newGuid} from "@/common/GuidLogic";
+import moment from "moment/moment";
 
 export const testModule = {
     state: () => ({
@@ -73,8 +74,6 @@ export const testModule = {
 
         addTestByInviting: async (context, code) => {
             const response = await axios.get(API_URL + TESTS_API_URL + "/?invitation_key=" + code);
-            //console.log(response.data[0])
-            //console.log(code)
             if (response.data[0] !== undefined){
 
                 let user = (await axios.get(API_URL + USERS_API_URL + '/?id=' + sessionStorage.getItem("UserID"))).data[0];
@@ -95,9 +94,11 @@ export const testModule = {
             let result = context.state.activeTest
             result.test_id = result.id
             result.id = newGuid()
+            result.date_of_passage = moment().format("YYYY-MM-DD HH:mm")
             result.user_id = sessionStorage.getItem("UserID")
 
             await axios.post(API_URL + RESULTS_API_URL + "/", result);
+            await context.dispatch("getResults")
         }
     }
 }

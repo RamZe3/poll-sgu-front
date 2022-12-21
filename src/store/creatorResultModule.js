@@ -38,9 +38,9 @@ export const creatorResultModule = {
             state.activeUserResult = activeResult
         },
 
-        addAnswerForAR(state, comment){
-            state.activeUserResult.comment = comment
-        },
+        // addAnswerForAR(state, comment){
+        //     state.activeUserResult.comment = comment
+        // },
     },
 
     actions: {
@@ -61,11 +61,11 @@ export const creatorResultModule = {
                             if (item.creator_id === sessionStorage.getItem("UserID")){
                                 getResults.push(item)
                                 if (!res.has(item.test_id)){
-                                    res.set(item.test_id, [item.user_id])
+                                    res.set(item.test_id, [item.id])
                                 }
                                 else {
                                     res.set(item.test_id,
-                                        [item.user_id , ...res.get(item.test_id)])
+                                        [item.id , ...res.get(item.test_id)])
                                 }
                             }
                         }
@@ -74,6 +74,7 @@ export const creatorResultModule = {
             context.commit("setResultsModel", res)
         },
 
+        //TODO не используется
         setActiveResult : async (context, id) => {
             const cResult = context.state.results.find(el => el.id === id)
 
@@ -87,8 +88,6 @@ export const creatorResultModule = {
 
         //For creator
         addComment: async (context) => {
-            //TODO put не работает
-            //context.state.activeResult.comment = comment
             await axios.put(API_URL + RESULTS_API_URL + "/" + context.state.activeUserResult.id,
                 context.state.activeUserResult)
         },

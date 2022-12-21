@@ -45,7 +45,7 @@ export const resultTestModule = {
                 if (item.user_id === sessionStorage.getItem("UserID")){
                     getResults.push(item)
                 }
-                //TODO переделать
+                //TODO переделать (не помню зачем)
                 else if (item.creator_id === sessionStorage.getItem("UserID")){
                     getResults.push(item)
                 }

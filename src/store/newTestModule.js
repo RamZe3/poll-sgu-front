@@ -115,7 +115,7 @@ export const newTestModule = {
         },
 
         deleteQuestion(state, index){
-            //TODO логика с порядком
+            //TODO логика с порядком потестить таймер
             state.newTest.questions.splice(index, 1)
             this.commit("setNewQuestions", state.newTest.questions)
 
@@ -170,7 +170,7 @@ export const newTestModule = {
 
             addTest.id = newGuid()
             addTest.creator_id = sessionStorage.getItem("UserID")
-            addTest.date_of_passage = moment().format("YYYY-MM-DD HH:mm")
+            addTest.date_of_creation = moment().format("YYYY-MM-DD HH:mm")
             if (addTest.by_invitation){
                 addTest.invitation_key = shortNewGuid()
             }

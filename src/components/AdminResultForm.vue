@@ -40,7 +40,7 @@
                     </div>
 
                     <div class="flex justify-center my-3">
-                        <button @click="this.$store.dispatch('addComment')" class="text-white mx-10 bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                        <button @click="addComment" class="text-white mx-10 bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
                             <p class="p-2 font-bold">Подтвердить</p>
                         </button>
                     </div>
@@ -60,6 +60,12 @@ export default {
   computed: mapState({
     activeUserResult: state => state.creatorM.activeUserResult,
   }),
+  methods:{
+    addComment(){
+      this.$store.dispatch('addComment')
+      this.$router.push('/myowntests')
+    }
+  }
 }
 </script>
 
