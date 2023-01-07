@@ -6,27 +6,40 @@
                 <div class="justify-center shadow-lg my-3 border-gray-300 border-2 p-[20px] w-full bg-blue-50 rounded-3xl">
                     <div class="my-6">
                         <p class="font-bold text-2xl">Список тестов</p>
+                        <p class="text-xs">(зеленый - психологический; Красный - обычный)</p>
                     </div>
                     <hr>
-                    <div class="flex">
-                        <div class="w-1/3 flex justify-start">
+                    <div class="flex justify-between">
+                        <div class="w-1/4 flex-">
                             <p class="font-bold flex items-center">Название</p>
                         </div>
                         <!-- доделать хидден -->
-                        <div class="w-1/3 flex justify-center md:hidden">
+                        <div class="w-1/4 flex md:hidden">
                             <p class="font-bold flex items-center">Описание</p>
+                        </div>
+                        <div class="w-1/4 flex">
+                            <p class="font-bold flex items-center">Дата создания</p>
+                        </div>
+                        <div class="w-1/4 flex">
+                            <p class="font-bold flex items-center">Прохождение</p>
                         </div>
                     </div>
                     <hr>
                     <div class="flex-col py-5">
                         <div class="flex my-3" v-for="(item, index) in tests" v-bind:key="index">
-                            <div class="w-1/3 flex justify-start items-center">
-                                <p class="flex text-left">{{ item.title }}</p>
+                            <div v-if="item.type == 'Default'" class="w-1/4 flex items-center md:hidden">
+                                <p class="flex text-left text-red-500">{{ item.title }}</p>
                             </div>
-                            <div class="w-1/3 flex justify-center items-center md:hidden">
+                            <div v-if="item.type == 'Psiho'" class="w-1/4 flex items-center md:hidden">
+                                <p class="flex text-left text-green-500">{{ item.title }}</p>
+                            </div>
+                            <div class="w-1/4 flex items-center md:hidden">
                                 <p class="flex text-left">{{ item.description }}</p>
                             </div>
-                            <div class="w-1/3 flex justify-end items-center">
+                            <div class="w-1/4 flex items-center md:hidden">
+                                <p class="flex text-left">{{ item.creation_date }}</p>
+                            </div>
+                            <div class="w-1/4 flex items-center">
                                 <router-link to="/test" @click="this.$store.dispatch('setActiveTestById', item.id)">
                                     <button class="group relative flex justify-center items-center text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
                                         <p class="px-4">Пройти тест</p>

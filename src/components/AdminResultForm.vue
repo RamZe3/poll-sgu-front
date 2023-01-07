@@ -27,6 +27,24 @@
 
 <!--            TODO логику для психологических тестов и тд ( мб коммент вне зависимости от ответа)-->
                 <div class="justify-center shadow-lg my-3 border-gray-300 border-2 p-[20px] w-3/5 bg-blue-50 rounded-3xl">
+                     
+                    <!-- отображать 2 блока ниже если тест с типом Phiho: -->
+                    
+                     <div v-if="activeUserResult.type == 'Psiho'" class="my-3">
+                        <p class="font-bold">Итоговый результат</p>
+                    </div>
+                    <hr>
+                    
+                    <!-- форма для ответа:  -->
+                    <div v-if="activeUserResult.type == 'Psiho'" class="flex justify-start my-3">
+                      <p class="font-medium">ВСТАВИТЬ РЕЗУЛЬТАТ</p> 
+                    </div>
+                  
+
+
+
+
+                    
                     <div class="my-3">
                         <p class="font-bold">Оставить комментарий</p>
                     </div>

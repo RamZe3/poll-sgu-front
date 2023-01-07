@@ -24,10 +24,10 @@
               <p class="font-bold flex items-center">Название</p>
             </div>
             <div class="w-3/4 flex justify-center">
-              <p class="w-1/5 flex justify-center font-bold items-center">Прошедшие тест</p>
+              <p class="w-3/6 flex justify-center font-bold items-center">Прошедшие тест</p>
               <!--TODO доделать хидден -->
-              <p class="w-3/5 flex justify-center font-bold items-center md:hidden">ID теста</p>
-              <p class="w-1/5 flex justify-center font-bold items-center md:hidden">Управление</p>
+              <p class="w-2/6 flex justify-center font-bold items-center md:hidden">ID теста</p>
+              <p class="w-1/6 flex justify-center font-bold items-center md:hidden">Управление</p>
             </div>
           </div>
           <hr>
@@ -37,9 +37,9 @@
                 <p>{{ getResultById(key) }}</p>
               </div>
               <div class="w-3/4 flex justify-between">
-                <div class="w-1/5 flex justify-center">
+                <div class="w-3/6 flex justify-center">
                   <button @click="open(index)"
-                          class="relative flex justify-center items-center text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
+                          class="relative flex w-full justify-center items-center text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
                     <p class="px-4">Посмотреть</p>
                     <div v-if="opened[index] && value.length > 0"
                          class="absolute z-10 top-full w-full bg-white shadow-md mt-1 rounded">
@@ -47,8 +47,8 @@
                            class="w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                         <button @click="setUserResultById(user)" to="/myowntests/result"
                                 class="z-20 block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white">
-                          {{ this.getLoginById(user) }}
-                          <div>{{ this.getDateById(user) }}</div>
+                          <strong>Имя:</strong> {{ this.getLoginById(user) }}<br>
+                          <strong>Дата прохождения:</strong> {{ this.getDateById(user) }}
                         </button>
                       </div>
                     </div>
@@ -63,12 +63,12 @@
                     </div>
                   </button>
                 </div>
-                <div class="w-3/5 flex justify-center md:hidden">
+                <div class="w-2/6 flex justify-center md:hidden">
                   <p class="w-3/4 relative flex justify-center items-center text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
                     {{ getInvitationKeyById(key) }}
                   </p>
                 </div>
-                <div class="w-1/5 flex justify-center items-center">
+                <div class="w-1/6 flex justify-center items-center">
                   <button type="button"
                           class="mr-1 text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -136,7 +136,7 @@ export default {
       if (answer !== undefined) {
         return answer
       } else {
-        return "Тест без приглашения..."
+        return "Тест без приглашения"
       }
     },
     getDateById(id) {

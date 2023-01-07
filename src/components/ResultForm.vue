@@ -66,6 +66,16 @@
 <!--                </div>-->
                 
                 <div class="justify-center shadow-lg border-gray-300 border-2 p-[20px] w-3/5 bg-blue-50 rounded-3xl">
+                    <!-- если тест с баллами выводим эти 2 блока div'ов: -->
+                    <div v-if="activeResult.type == 'Psiho'" class="my-3">
+                        <p class="font-bold">Итоговый результат</p>
+                    </div>
+                    <hr>
+                    <!-- форма для ответа: -->
+                    <div v-if="activeResult.type == 'Psiho'" class="flex justify-start my-3">
+                      <p class="font-medium">{{ activeResult.result }}</p> 
+                    </div>
+                  
                     <div class="my-3">
                         <p class="font-bold">Комментарий психолога</p>
                     </div>

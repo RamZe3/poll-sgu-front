@@ -98,6 +98,172 @@
       ],
       "date_of_creation": "2022-12-20 15:11",
       "invitation_key": "a94fd309"
+    },
+    {
+      "id": "8234b57c-7622-4c41-9d29-00119e184fa1",
+      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
+      "by_invitation": false,
+      "title": "тест с баллами",
+      "description": "описание теста",
+      "type": "Psiho",
+      "questions": [
+        {
+          "id": "5dbee98f-5ec3-4497-b536-e234c0161c72",
+          "number": 0,
+          "question_text": "1",
+          "answers": [
+            {
+              "number": 0,
+              "title": "1",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "1",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "date_of_creation": "2023-01-07 18:07",
+      "ballings": [
+        {
+          "id": null,
+          "number": 0,
+          "minValue": "0",
+          "maxValue": "1",
+          "answer": "результкат 1"
+        },
+        {
+          "id": null,
+          "number": 1,
+          "minValue": "2",
+          "maxValue": "2",
+          "answer": "результат 2"
+        }
+      ]
+    },
+    {
+      "id": "69632b51-2a2a-449e-8f0f-8f6bb950d3a7",
+      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
+      "by_invitation": false,
+      "title": "тест с баллами 2",
+      "description": " 1",
+      "type": "Psiho",
+      "questions": [
+        {
+          "id": "ecf5f7dd-975c-4d95-87b5-8db5d8855bda",
+          "number": 0,
+          "question_text": "1",
+          "answers": [
+            {
+              "number": 0,
+              "title": "1",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "2",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "id": "cce41d4f-0b85-434a-83a0-8a6d6b31f7cc",
+          "number": 1,
+          "question_text": "2",
+          "answers": [
+            {
+              "number": 0,
+              "title": "1",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "2",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "date_of_creation": "2023-01-07 18:09",
+      "ballings": [
+        {
+          "id": null,
+          "number": 0,
+          "minValue": "0",
+          "maxValue": "2",
+          "answer": "результкат 1"
+        },
+        {
+          "id": null,
+          "number": 1,
+          "minValue": "3",
+          "maxValue": "4",
+          "answer": "результат 2"
+        }
+      ]
+    },
+    {
+      "id": "291fbe3f-28f7-48cf-bd55-ec5123149245",
+      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
+      "by_invitation": false,
+      "title": "тест с баллами 3",
+      "description": "тест",
+      "type": "Psiho",
+      "questions": [
+        {
+          "id": "ddd8f0c0-182e-4108-977c-5dd23d28917b",
+          "number": 0,
+          "question_text": "1",
+          "answers": [
+            {
+              "number": 0,
+              "title": "1",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "1",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "id": "1096b6b9-202b-459d-8613-2f07be752bb3",
+          "number": 1,
+          "question_text": "2",
+          "answers": [
+            {
+              "number": 0,
+              "title": "1",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "2",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "date_of_creation": "2023-01-07 18:11",
+      "ballings": [
+        {
+          "id": null,
+          "number": 0,
+          "minValue": "0",
+          "maxValue": "2",
+          "answer": "результкат 1"
+        },
+        {
+          "id": null,
+          "number": 1,
+          "minValue": "3",
+          "maxValue": "5",
+          "answer": "результат 2"
+        }
+      ]
     }
   ],
   "results": [
@@ -366,6 +532,196 @@
       "test_id": "43500b5e-5cca-4be6-b513-589629c973d9",
       "user_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
       "comment": "sad"
+    },
+    {
+      "id": "76946fe9-9d39-434b-a60b-d4d2d97009e6",
+      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
+      "by_invitation": false,
+      "title": "тест с баллами",
+      "description": "описание теста",
+      "type": "Psiho",
+      "questions": [
+        {
+          "id": "5dbee98f-5ec3-4497-b536-e234c0161c72",
+          "number": 0,
+          "question_text": "1",
+          "answers": [
+            {
+              "number": 0,
+              "title": "1",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "1",
+              "value": "2"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        }
+      ],
+      "date_of_creation": "2023-01-07 18:07",
+      "ballings": [
+        {
+          "id": null,
+          "number": 0,
+          "minValue": "0",
+          "maxValue": "1",
+          "answer": "результкат 1"
+        },
+        {
+          "id": null,
+          "number": 1,
+          "minValue": "2",
+          "maxValue": "2",
+          "answer": "результат 2"
+        }
+      ],
+      "test_id": "8234b57c-7622-4c41-9d29-00119e184fa1",
+      "date_of_passage": "2023-01-07 18:07",
+      "user_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b"
+    },
+    {
+      "id": "ac7208d6-44ac-41e4-8c1e-b2bb80e19b05",
+      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
+      "by_invitation": false,
+      "title": "тест с баллами 2",
+      "description": " 1",
+      "type": "Psiho",
+      "questions": [
+        {
+          "id": "ecf5f7dd-975c-4d95-87b5-8db5d8855bda",
+          "number": 0,
+          "question_text": "1",
+          "answers": [
+            {
+              "number": 0,
+              "title": "1",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "2",
+              "value": "2"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "cce41d4f-0b85-434a-83a0-8a6d6b31f7cc",
+          "number": 1,
+          "question_text": "2",
+          "answers": [
+            {
+              "number": 0,
+              "title": "1",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "2",
+              "value": "2"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        }
+      ],
+      "date_of_creation": "2023-01-07 18:09",
+      "ballings": [
+        {
+          "id": null,
+          "number": 0,
+          "minValue": "0",
+          "maxValue": "2",
+          "answer": "результкат 1"
+        },
+        {
+          "id": null,
+          "number": 1,
+          "minValue": "3",
+          "maxValue": "4",
+          "answer": "результат 2"
+        }
+      ],
+      "test_id": "69632b51-2a2a-449e-8f0f-8f6bb950d3a7",
+      "date_of_passage": "2023-01-07 18:09",
+      "user_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b"
+    },
+    {
+      "id": "e614dda1-479c-4004-869b-7344e576e037",
+      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
+      "by_invitation": false,
+      "title": "тест с баллами 3",
+      "description": "тест",
+      "type": "Psiho",
+      "questions": [
+        {
+          "id": "ddd8f0c0-182e-4108-977c-5dd23d28917b",
+          "number": 0,
+          "question_text": "1",
+          "answers": [
+            {
+              "number": 0,
+              "title": "1",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "1",
+              "value": "2"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "id": "1096b6b9-202b-459d-8613-2f07be752bb3",
+          "number": 1,
+          "question_text": "2",
+          "answers": [
+            {
+              "number": 0,
+              "title": "1",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "2",
+              "value": "2"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        }
+      ],
+      "date_of_creation": "2023-01-07 18:11",
+      "ballings": [
+        {
+          "id": null,
+          "number": 0,
+          "minValue": "0",
+          "maxValue": "2",
+          "answer": "результкат 1"
+        },
+        {
+          "id": null,
+          "number": 1,
+          "minValue": "3",
+          "maxValue": "5",
+          "answer": "результат 2"
+        }
+      ],
+      "test_id": "291fbe3f-28f7-48cf-bd55-ec5123149245",
+      "date_of_passage": "2023-01-07 18:11",
+      "user_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b"
     }
   ]
 }
