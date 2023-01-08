@@ -72,13 +72,13 @@
                     <div v-for="answer in this.activeTest.questions[this.questionM].answers" :key="answer.number" class="flex items-center my-3 ">
                       <!--TODO для нескольких ответов и checked доделать-->
                       <label v-if="answer.number%2 === 0" class="pl-3 w-full h-16 justify-start border border-gray-300 hover:border-gray-400 rounded-2xl items-center flex text-sm font-medium text-gray-900 dark:text-gray-300">
-                        <input
+                        <input :checked="this.activeTest.questions[this.questionM].answer !== undefined && this.activeTest.questions[this.questionM].answer.includes(answer.number)"
                               @input="setAnswerToQ(answer.number)"
                               :id="answer.number" type="radio" name="answer" class="w-4 border border-gray-300 rounded" required>
                         <p class="ml-2 text-left">{{ answer.title }} </p>
                       </label>
                       <label v-else class="pl-3 w-full h-16 justify-start items-center border border-gray-300 hover:border-gray-400 rounded-2xl bg-gray-200 flex text-sm font-medium text-gray-900 dark:text-gray-300">
-                        <input
+                        <input :checked="this.activeTest.questions[this.questionM].answer !== undefined && this.activeTest.questions[this.questionM].answer.includes(answer.number)"
                               @input="setAnswerToQ(answer.number)"
                               :id="answer.number" type="radio" name="answer" class="w-4 border border-gray-300 rounded" required>
                         <p class="ml-2 text-left">{{ answer.title }}</p>
@@ -155,6 +155,7 @@ export default {
       //TODO переделать строку
       let str = ''
       this.getEmptyAnswers().forEach(el => str+=el+1 + ", ")
+      str = str.slice(0, -2)
       return str
     }
   },

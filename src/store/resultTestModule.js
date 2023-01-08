@@ -29,9 +29,9 @@ export const resultTestModule = {
             state.activeResult = activeResult
         },
 
-        addAnswerForAR(state, activeResult){
-            state.activeResult = activeResult
-        },
+        //addAnswerForAR(state, activeResult){
+        //    state.activeResult.comment = activeResult
+        //},
     },
 
     actions: {

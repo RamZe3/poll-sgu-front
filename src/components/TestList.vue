@@ -37,7 +37,7 @@
                                 <p class="flex text-left">{{ item.description }}</p>
                             </div>
                             <div class="w-1/4 flex items-center md:hidden">
-                                <p class="flex text-left">{{ item.creation_date }}</p>
+                                <p class="flex text-left">{{ item.date_of_creation }}</p>
                             </div>
                             <div class="w-1/4 flex items-center">
                                 <router-link to="/test" @click="this.$store.dispatch('setActiveTestById', item.id)">

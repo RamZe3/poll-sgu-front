@@ -4,7 +4,8 @@
           <div class="flex flex-col justify-center items-center">
                 <div class="justify-center shadow-lg border-gray-300 border-2 p-[20px] w-3/5 bg-blue-50 rounded-3xl">
                     <div class="my-3">
-                      <p class="font-bold">Результат теста "Шахматы" <br> пользователя Павел</p>
+<!--                      TODO пользователя-->
+                      <p class="font-bold">Результат теста "{{activeUserResult.title}}" <br> пользователя ???</p>
                   </div>
                 </div>
 

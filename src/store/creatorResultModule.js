@@ -38,9 +38,9 @@ export const creatorResultModule = {
             state.activeUserResult = activeResult
         },
 
-        // addAnswerForAR(state, comment){
-        //     state.activeUserResult.comment = comment
-        // },
+        addAnswerForAR(state, comment){
+            state.activeUserResult.comment = comment
+        },
     },
 
     actions: {

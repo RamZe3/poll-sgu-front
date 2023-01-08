@@ -1,560 +1,707 @@
 {
   "users": [
     {
-      "id": "417b5132-22c6-4b8e-8a88-648affbe3ca0",
-      "email": "ramilfitkulin@mail.ru",
-      "login": "Обычный юзер",
-      "password": "123456",
-      "roles": [
-        "user"
-      ],
-      "tests_by_invite": []
-    },
-    {
-      "id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
+      "id": "e0d40a79-b324-406e-86cf-3f9094e1eeb7",
       "email": "ramilfitkulin@icloud.com",
-      "login": "Создатель",
+      "login": "Создатель тестов",
       "password": "123456",
       "roles": [
         "user",
         "creator"
       ],
-      "tests_by_invite": [
-        "2c87799c-519c-4eb2-8628-adaf4668f20d"
-      ]
+      "tests_by_invite": []
     },
     {
-      "id": "e5718ba0-9229-44a1-932e-2e69b6131a7a",
-      "email": "cocix27210@bomoads.com",
-      "login": "Второй обычный юзер",
+      "id": "6e04fe2e-6162-4910-a8c3-33a9e32f1269",
+      "email": "motoke2934@liepaia.com",
+      "login": "Рамиль пользователь",
       "password": "123456",
       "roles": [
         "user"
       ],
-      "tests_by_invite": []
+      "tests_by_invite": [
+        "3c2a21c8-eec7-4797-955c-159576e62e4b"
+      ]
     }
   ],
   "tests": [
     {
-      "id": "43500b5e-5cca-4be6-b513-589629c973d9",
-      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
+      "id": "bb6e446a-ae66-4749-b2f3-2043fad07dbd",
+      "creator_id": "e0d40a79-b324-406e-86cf-3f9094e1eeb7",
       "by_invitation": false,
-      "title": "312",
-      "description": "qwe",
-      "type": "Default",
+      "title": "Умение рационально использовать время",
+      "description": "Тест позволяет определить умение рационально использовать время",
+      "type": "Psiho",
       "questions": [
         {
-          "id": "86204f95-07d4-423f-863c-cc37513db9e2",
+          "id": "330082ad-8538-4943-8761-608c97d25528",
           "number": 0,
-          "question_text": "231132",
+          "question_text": "Я резервирую в начале рабочего дня время для подготовительной работы, планирования.",
           "answers": [
             {
               "number": 0,
-              "title": "13321"
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "60d921aa-5ed4-4767-9314-62cf15cb5670",
+          "number": 1,
+          "question_text": "Я перепоручаю все, что может быть перепоручено.",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "229fb548-6cb1-437e-a81b-5d56bb2c41ad",
+          "number": 2,
+          "question_text": "Я письменно фиксирую задачи и цели, с указанием сроков их реализации",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "61fe7198-ee9f-4445-a87e-3a95d982e4d3",
+          "number": 3,
+          "question_text": "Каждый официальный документ я стараюсь обрабатывать за один раз и окончательно",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "7f1a391b-a222-4835-9a15-19295efa2b48",
+          "number": 4,
+          "question_text": "Каждый день я составляю список предстоящих дел, упорядоченный по приоритетам. Важнейшие вещи я делаю в первую очередь",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "3dd901e8-5d02-43d1-92af-0b0d3ed7c440",
+          "number": 5,
+          "question_text": "Свой рабочий день я освобождаю от посторонних телефонных разговоров незапланированных встреч, неожиданных совещаний",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "f8c4fae5-b554-410e-859f-931eb4a5148f",
+          "number": 6,
+          "question_text": "Свою дневную нагрузку я распределяю в соответствии с графиком моей работоспособности",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "4f616a21-c844-4e65-9e3a-8f71d5939c0b",
+          "number": 7,
+          "question_text": "В моем плане всегда есть окна, позволяющие реагировать на актуальные проблемы",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "f6baf1c2-5c3d-441a-b453-d4ac1faea3ff",
+          "number": 8,
+          "question_text": "Я направляю свою активность таким образом, чтобы в первую очередь концентрироваться на немногих, «жизненно важных» проблемах",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "8ddfa280-09c0-46ee-8ff7-1907872ef0c0",
+          "number": 9,
+          "question_text": "Я умею говорить «нет», когда на мое время претендуют другие, а мне необходимо делать более важные дела",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
             }
           ]
         }
       ],
-      "date_of_passage": "2022-12-19 12:18"
+      "date_of_creation": "2023-01-08 18:18",
+      "ballings": [
+        {
+          "id": null,
+          "number": 0,
+          "minValue": "0",
+          "maxValue": "15",
+          "answer": "Вы не планируете свое время и находитесь во власти внешних обстоятельств. Вы добьетесь своих целей, если составите список приоритетов и будете придерживаться его."
+        },
+        {
+          "id": null,
+          "number": 1,
+          "minValue": "16",
+          "maxValue": "20",
+          "answer": "Вы пытаетесь овладеть своим временем, но не всегда достаточно последовательны, чтобы иметь успех."
+        },
+        {
+          "id": null,
+          "number": 2,
+          "minValue": "20",
+          "maxValue": "25",
+          "answer": "У Вас достаточно высокий уровень самоменеджмента."
+        },
+        {
+          "id": null,
+          "number": 3,
+          "minValue": "26",
+          "maxValue": "35",
+          "answer": "Вы можете служить образцом каждому, кто хочет научиться рационально использовать свое время. У Вас стоит поучиться."
+        }
+      ]
     },
     {
-      "id": "2c87799c-519c-4eb2-8628-adaf4668f20d",
-      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
+      "id": "3c2a21c8-eec7-4797-955c-159576e62e4b",
+      "creator_id": "e0d40a79-b324-406e-86cf-3f9094e1eeb7",
       "by_invitation": true,
-      "title": "Новый",
-      "description": "Новый",
+      "title": "Ваша нервозность",
+      "description": "Психолог проверит вашу нервозность по ответам на вопросы",
       "type": "Default",
       "questions": [
         {
-          "id": "7e8615a1-4cf8-4b5c-ba8d-f44adcff1d5f",
+          "id": "264dd8ca-897c-4ee0-ab60-4fbacfa7781a",
           "number": 0,
-          "question_text": "Тест",
+          "question_text": "Становится ли вам не по себе, если вы находитесь в полной темноте и плюс к тому - в одиночестве?",
           "answers": [
             {
               "number": 0,
-              "title": "Тест"
+              "title": "да"
             },
             {
               "number": 1,
-              "title": "Тест2"
+              "title": "нет"
             }
           ]
         },
         {
-          "id": "dd0a24bf-faef-483f-a0e9-97234cba3750",
+          "id": "a3a3d988-e34e-458b-85f5-3b8e048e6e2e",
           "number": 1,
-          "question_text": "Новый",
+          "question_text": "Считаете ли вы, что у вас слишком много обязанностей?",
           "answers": [
             {
               "number": 0,
-              "title": "Тест"
+              "title": "да"
             },
             {
               "number": 1,
-              "title": "ТЕст"
+              "title": "нет"
+            }
+          ]
+        },
+        {
+          "id": "ae97a41d-8bd6-4911-8a4a-1cc00937c9b2",
+          "number": 2,
+          "question_text": "Беспокоитесь ли вы о том, что думают о вас окружающие?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ]
+        },
+        {
+          "id": "cbee6c05-6c91-46bf-9527-904ff4045feb",
+          "number": 3,
+          "question_text": "Часто ли вы вздрагиваете, когда звонит телефон?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ]
+        },
+        {
+          "id": "77815344-1feb-420e-803a-969b8ed1a154",
+          "number": 4,
+          "question_text": "Беспокоитесь ли вы по мелочам?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ]
+        },
+        {
+          "id": "7468750d-69b3-406e-b0e2-0b6f3b0f7328",
+          "number": 5,
+          "question_text": "Беспокоитесь ли вы о своем здоровье?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ]
+        },
+        {
+          "id": "bb178b19-c1cf-46ce-86aa-d9332c7d7b67",
+          "number": 6,
+          "question_text": "Беспокоитесь ли вы о деньгах?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ]
+        },
+        {
+          "id": "ebb4dc25-a23d-492e-a02a-00915f5bf98f",
+          "number": 7,
+          "question_text": "Сильно ли вы переживаете, если пропускаете свою пересадку, когда едете в транспорте?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ]
+        },
+        {
+          "id": "b5861533-e72b-4330-8fb4-4c45af2f2fcc",
+          "number": 8,
+          "question_text": "Мучает ли вас бессонница оттого, что вас что-то волнует в часы, когда вы должны спать?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ]
+        },
+        {
+          "id": "35bd18eb-4fec-4b5e-bc49-f4d068a1d9a3",
+          "number": 9,
+          "question_text": "Нуждаетесь ли вы когда-нибудь в снотворном?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
             }
           ]
         }
       ],
-      "date_of_creation": "2022-12-20 15:11",
-      "invitation_key": "a94fd309"
-    },
-    {
-      "id": "8234b57c-7622-4c41-9d29-00119e184fa1",
-      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
-      "by_invitation": false,
-      "title": "тест с баллами",
-      "description": "описание теста",
-      "type": "Psiho",
-      "questions": [
-        {
-          "id": "5dbee98f-5ec3-4497-b536-e234c0161c72",
-          "number": 0,
-          "question_text": "1",
-          "answers": [
-            {
-              "number": 0,
-              "title": "1",
-              "value": "1"
-            },
-            {
-              "number": 1,
-              "title": "1",
-              "value": "2"
-            }
-          ]
-        }
-      ],
-      "date_of_creation": "2023-01-07 18:07",
-      "ballings": [
-        {
-          "id": null,
-          "number": 0,
-          "minValue": "0",
-          "maxValue": "1",
-          "answer": "результкат 1"
-        },
-        {
-          "id": null,
-          "number": 1,
-          "minValue": "2",
-          "maxValue": "2",
-          "answer": "результат 2"
-        }
-      ]
-    },
-    {
-      "id": "69632b51-2a2a-449e-8f0f-8f6bb950d3a7",
-      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
-      "by_invitation": false,
-      "title": "тест с баллами 2",
-      "description": " 1",
-      "type": "Psiho",
-      "questions": [
-        {
-          "id": "ecf5f7dd-975c-4d95-87b5-8db5d8855bda",
-          "number": 0,
-          "question_text": "1",
-          "answers": [
-            {
-              "number": 0,
-              "title": "1",
-              "value": "1"
-            },
-            {
-              "number": 1,
-              "title": "2",
-              "value": "2"
-            }
-          ]
-        },
-        {
-          "id": "cce41d4f-0b85-434a-83a0-8a6d6b31f7cc",
-          "number": 1,
-          "question_text": "2",
-          "answers": [
-            {
-              "number": 0,
-              "title": "1",
-              "value": "1"
-            },
-            {
-              "number": 1,
-              "title": "2",
-              "value": "2"
-            }
-          ]
-        }
-      ],
-      "date_of_creation": "2023-01-07 18:09",
-      "ballings": [
-        {
-          "id": null,
-          "number": 0,
-          "minValue": "0",
-          "maxValue": "2",
-          "answer": "результкат 1"
-        },
-        {
-          "id": null,
-          "number": 1,
-          "minValue": "3",
-          "maxValue": "4",
-          "answer": "результат 2"
-        }
-      ]
-    },
-    {
-      "id": "291fbe3f-28f7-48cf-bd55-ec5123149245",
-      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
-      "by_invitation": false,
-      "title": "тест с баллами 3",
-      "description": "тест",
-      "type": "Psiho",
-      "questions": [
-        {
-          "id": "ddd8f0c0-182e-4108-977c-5dd23d28917b",
-          "number": 0,
-          "question_text": "1",
-          "answers": [
-            {
-              "number": 0,
-              "title": "1",
-              "value": "1"
-            },
-            {
-              "number": 1,
-              "title": "1",
-              "value": "2"
-            }
-          ]
-        },
-        {
-          "id": "1096b6b9-202b-459d-8613-2f07be752bb3",
-          "number": 1,
-          "question_text": "2",
-          "answers": [
-            {
-              "number": 0,
-              "title": "1",
-              "value": "1"
-            },
-            {
-              "number": 1,
-              "title": "2",
-              "value": "2"
-            }
-          ]
-        }
-      ],
-      "date_of_creation": "2023-01-07 18:11",
-      "ballings": [
-        {
-          "id": null,
-          "number": 0,
-          "minValue": "0",
-          "maxValue": "2",
-          "answer": "результкат 1"
-        },
-        {
-          "id": null,
-          "number": 1,
-          "minValue": "3",
-          "maxValue": "5",
-          "answer": "результат 2"
-        }
-      ]
+      "date_of_creation": "2023-01-08 18:38",
+      "invitation_key": "d1daeba4"
     }
   ],
   "results": [
     {
-      "id": "1b70c0f3-fa75-49cc-9992-2b6d7b1856ce",
-      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
+      "id": "add091b5-2784-47f5-bb7a-f84ffb934ecf",
+      "creator_id": "e0d40a79-b324-406e-86cf-3f9094e1eeb7",
       "by_invitation": false,
-      "title": "312",
-      "description": "qwe",
-      "type": "Default",
-      "questions": [
-        {
-          "id": "86204f95-07d4-423f-863c-cc37513db9e2",
-          "number": 0,
-          "question_text": "231132",
-          "answers": [
-            {
-              "number": 0,
-              "title": "13321"
-            }
-          ],
-          "answer": [
-            0
-          ]
-        }
-      ],
-      "date_of_passage": "2022-12-20 15:01",
-      "test_id": "43500b5e-5cca-4be6-b513-589629c973d9",
-      "user_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
-      "comment": "sada"
-    },
-    {
-      "id": "4b63c0d6-7f93-4144-bef9-8bd2442e8a37",
-      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
-      "by_invitation": false,
-      "title": "312",
-      "description": "qwe",
-      "type": "Default",
-      "questions": [
-        {
-          "id": "86204f95-07d4-423f-863c-cc37513db9e2",
-          "number": 0,
-          "question_text": "231132",
-          "answers": [
-            {
-              "number": 0,
-              "title": "13321"
-            }
-          ],
-          "answer": [
-            0
-          ]
-        }
-      ],
-      "date_of_passage": "2022-12-20 15:09",
-      "test_id": "43500b5e-5cca-4be6-b513-589629c973d9",
-      "user_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
-      "comment": "yjdsq"
-    },
-    {
-      "id": "fb127069-92c9-47cb-9617-d8f5cc30eebb",
-      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
-      "by_invitation": true,
-      "title": "Новый",
-      "description": "Новый",
-      "type": "Default",
-      "questions": [
-        {
-          "id": "7e8615a1-4cf8-4b5c-ba8d-f44adcff1d5f",
-          "number": 0,
-          "question_text": "Тест",
-          "answers": [
-            {
-              "number": 0,
-              "title": "Тест"
-            },
-            {
-              "number": 1,
-              "title": "Тест2"
-            }
-          ],
-          "answer": [
-            0
-          ]
-        },
-        {
-          "id": "dd0a24bf-faef-483f-a0e9-97234cba3750",
-          "number": 1,
-          "question_text": "Новый",
-          "answers": [
-            {
-              "number": 0,
-              "title": "Тест"
-            },
-            {
-              "number": 1,
-              "title": "ТЕст"
-            }
-          ],
-          "answer": [
-            1
-          ]
-        }
-      ],
-      "date_of_creation": "2022-12-20 15:11",
-      "invitation_key": "a94fd309",
-      "test_id": "2c87799c-519c-4eb2-8628-adaf4668f20d",
-      "date_of_passage": "2022-12-20 15:12",
-      "user_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
-      "comment": "sd"
-    },
-    {
-      "id": "19624087-bb07-4f8d-b858-5c5fc793caf2",
-      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
-      "by_invitation": true,
-      "title": "Новый",
-      "description": "Новый",
-      "type": "Default",
-      "questions": [
-        {
-          "id": "7e8615a1-4cf8-4b5c-ba8d-f44adcff1d5f",
-          "number": 0,
-          "question_text": "Тест",
-          "answers": [
-            {
-              "number": 0,
-              "title": "Тест"
-            },
-            {
-              "number": 1,
-              "title": "Тест2"
-            }
-          ],
-          "answer": [
-            1
-          ]
-        },
-        {
-          "id": "dd0a24bf-faef-483f-a0e9-97234cba3750",
-          "number": 1,
-          "question_text": "Новый",
-          "answers": [
-            {
-              "number": 0,
-              "title": "Тест"
-            },
-            {
-              "number": 1,
-              "title": "ТЕст"
-            }
-          ],
-          "answer": [
-            1
-          ]
-        }
-      ],
-      "date_of_creation": "2022-12-20 15:11",
-      "invitation_key": "a94fd309",
-      "test_id": "2c87799c-519c-4eb2-8628-adaf4668f20d",
-      "date_of_passage": "2022-12-20 15:57",
-      "user_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
-      "comment": "123"
-    },
-    {
-      "id": "885b2480-1c30-48a3-8d1d-17ed065cb995",
-      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
-      "by_invitation": false,
-      "title": "312",
-      "description": "qwe",
-      "type": "Default",
-      "questions": [
-        {
-          "id": "86204f95-07d4-423f-863c-cc37513db9e2",
-          "number": 0,
-          "question_text": "231132",
-          "answers": [
-            {
-              "number": 0,
-              "title": "13321"
-            }
-          ],
-          "answer": [
-            0
-          ]
-        }
-      ],
-      "date_of_passage": "2022-12-20 16:26",
-      "test_id": "43500b5e-5cca-4be6-b513-589629c973d9",
-      "user_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b"
-    },
-    {
-      "id": "0397b2c8-00f1-45e9-b0b0-0d7de62edae2",
-      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
-      "by_invitation": true,
-      "title": "Новый",
-      "description": "Новый",
-      "type": "Default",
-      "questions": [
-        {
-          "id": "7e8615a1-4cf8-4b5c-ba8d-f44adcff1d5f",
-          "number": 0,
-          "question_text": "Тест",
-          "answers": [
-            {
-              "number": 0,
-              "title": "Тест"
-            },
-            {
-              "number": 1,
-              "title": "Тест2"
-            }
-          ],
-          "answer": [
-            0
-          ]
-        },
-        {
-          "id": "dd0a24bf-faef-483f-a0e9-97234cba3750",
-          "number": 1,
-          "question_text": "Новый",
-          "answers": [
-            {
-              "number": 0,
-              "title": "Тест"
-            },
-            {
-              "number": 1,
-              "title": "ТЕст"
-            }
-          ],
-          "answer": [
-            1
-          ]
-        }
-      ],
-      "date_of_creation": "2022-12-20 15:11",
-      "invitation_key": "a94fd309",
-      "test_id": "2c87799c-519c-4eb2-8628-adaf4668f20d",
-      "date_of_passage": "2022-12-20 16:27",
-      "user_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b"
-    },
-    {
-      "id": "b1466ab3-3722-4906-bbb2-8bd91c3bb682",
-      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
-      "by_invitation": false,
-      "title": "312",
-      "description": "qwe",
-      "type": "Default",
-      "questions": [
-        {
-          "id": "86204f95-07d4-423f-863c-cc37513db9e2",
-          "number": 0,
-          "question_text": "231132",
-          "answers": [
-            {
-              "number": 0,
-              "title": "13321"
-            }
-          ],
-          "answer": [
-            0
-          ]
-        }
-      ],
-      "date_of_passage": "2022-12-20 16:28",
-      "test_id": "43500b5e-5cca-4be6-b513-589629c973d9",
-      "user_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
-      "comment": "sad"
-    },
-    {
-      "id": "76946fe9-9d39-434b-a60b-d4d2d97009e6",
-      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
-      "by_invitation": false,
-      "title": "тест с баллами",
-      "description": "описание теста",
+      "title": "Умение рационально использовать время",
+      "description": "Тест позволяет определить умение рационально использовать время",
       "type": "Psiho",
       "questions": [
         {
-          "id": "5dbee98f-5ec3-4497-b536-e234c0161c72",
+          "id": "330082ad-8538-4943-8761-608c97d25528",
           "number": 0,
-          "question_text": "1",
+          "question_text": "Я резервирую в начале рабочего дня время для подготовительной работы, планирования.",
           "answers": [
             {
               "number": 0,
-              "title": "1",
+              "title": "иногда",
               "value": "1"
             },
             {
               "number": 1,
-              "title": "1",
+              "title": "часто",
               "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "id": "60d921aa-5ed4-4767-9314-62cf15cb5670",
+          "number": 1,
+          "question_text": "Я перепоручаю все, что может быть перепоручено.",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "id": "229fb548-6cb1-437e-a81b-5d56bb2c41ad",
+          "number": 2,
+          "question_text": "Я письменно фиксирую задачи и цели, с указанием сроков их реализации",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "61fe7198-ee9f-4445-a87e-3a95d982e4d3",
+          "number": 3,
+          "question_text": "Каждый официальный документ я стараюсь обрабатывать за один раз и окончательно",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "id": "7f1a391b-a222-4835-9a15-19295efa2b48",
+          "number": 4,
+          "question_text": "Каждый день я составляю список предстоящих дел, упорядоченный по приоритетам. Важнейшие вещи я делаю в первую очередь",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "3dd901e8-5d02-43d1-92af-0b0d3ed7c440",
+          "number": 5,
+          "question_text": "Свой рабочий день я освобождаю от посторонних телефонных разговоров незапланированных встреч, неожиданных совещаний",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "id": "f8c4fae5-b554-410e-859f-931eb4a5148f",
+          "number": 6,
+          "question_text": "Свою дневную нагрузку я распределяю в соответствии с графиком моей работоспособности",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "4f616a21-c844-4e65-9e3a-8f71d5939c0b",
+          "number": 7,
+          "question_text": "В моем плане всегда есть окна, позволяющие реагировать на актуальные проблемы",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "id": "f6baf1c2-5c3d-441a-b453-d4ac1faea3ff",
+          "number": 8,
+          "question_text": "Я направляю свою активность таким образом, чтобы в первую очередь концентрироваться на немногих, «жизненно важных» проблемах",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "id": "8ddfa280-09c0-46ee-8ff7-1907872ef0c0",
+          "number": 9,
+          "question_text": "Я умею говорить «нет», когда на мое время претендуют другие, а мне необходимо делать более важные дела",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
             }
           ],
           "answer": [
@@ -562,49 +709,68 @@
           ]
         }
       ],
-      "date_of_creation": "2023-01-07 18:07",
+      "date_of_creation": "2023-01-08 18:18",
       "ballings": [
         {
           "id": null,
           "number": 0,
           "minValue": "0",
-          "maxValue": "1",
-          "answer": "результкат 1"
+          "maxValue": "15",
+          "answer": "Вы не планируете свое время и находитесь во власти внешних обстоятельств. Вы добьетесь своих целей, если составите список приоритетов и будете придерживаться его."
         },
         {
           "id": null,
           "number": 1,
-          "minValue": "2",
-          "maxValue": "2",
-          "answer": "результат 2"
+          "minValue": "16",
+          "maxValue": "20",
+          "answer": "Вы пытаетесь овладеть своим временем, но не всегда достаточно последовательны, чтобы иметь успех."
+        },
+        {
+          "id": null,
+          "number": 2,
+          "minValue": "20",
+          "maxValue": "25",
+          "answer": "У Вас достаточно высокий уровень самоменеджмента."
+        },
+        {
+          "id": null,
+          "number": 3,
+          "minValue": "26",
+          "maxValue": "35",
+          "answer": "Вы можете служить образцом каждому, кто хочет научиться рационально использовать свое время. У Вас стоит поучиться."
         }
       ],
-      "test_id": "8234b57c-7622-4c41-9d29-00119e184fa1",
-      "date_of_passage": "2023-01-07 18:07",
-      "user_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b"
+      "test_id": "bb6e446a-ae66-4749-b2f3-2043fad07dbd",
+      "date_of_passage": "2023-01-08 18:20",
+      "user_id": "e0d40a79-b324-406e-86cf-3f9094e1eeb7"
     },
     {
-      "id": "ac7208d6-44ac-41e4-8c1e-b2bb80e19b05",
-      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
+      "id": "0017c16c-e806-4b77-90db-d0be880a96e2",
+      "creator_id": "e0d40a79-b324-406e-86cf-3f9094e1eeb7",
       "by_invitation": false,
-      "title": "тест с баллами 2",
-      "description": " 1",
+      "title": "Умение рационально использовать время",
+      "description": "Тест позволяет определить умение рационально использовать время",
       "type": "Psiho",
       "questions": [
         {
-          "id": "ecf5f7dd-975c-4d95-87b5-8db5d8855bda",
+          "id": "330082ad-8538-4943-8761-608c97d25528",
           "number": 0,
-          "question_text": "1",
+          "question_text": "Я резервирую в начале рабочего дня время для подготовительной работы, планирования.",
           "answers": [
             {
               "number": 0,
-              "title": "1",
+              "title": "иногда",
               "value": "1"
             },
             {
               "number": 1,
-              "title": "2",
+              "title": "часто",
               "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
             }
           ],
           "answer": [
@@ -612,69 +778,24 @@
           ]
         },
         {
-          "id": "cce41d4f-0b85-434a-83a0-8a6d6b31f7cc",
+          "id": "60d921aa-5ed4-4767-9314-62cf15cb5670",
           "number": 1,
-          "question_text": "2",
+          "question_text": "Я перепоручаю все, что может быть перепоручено.",
           "answers": [
             {
               "number": 0,
-              "title": "1",
+              "title": "иногда",
               "value": "1"
             },
             {
               "number": 1,
-              "title": "2",
+              "title": "часто",
               "value": "2"
-            }
-          ],
-          "answer": [
-            0
-          ]
-        }
-      ],
-      "date_of_creation": "2023-01-07 18:09",
-      "ballings": [
-        {
-          "id": null,
-          "number": 0,
-          "minValue": "0",
-          "maxValue": "2",
-          "answer": "результкат 1"
-        },
-        {
-          "id": null,
-          "number": 1,
-          "minValue": "3",
-          "maxValue": "4",
-          "answer": "результат 2"
-        }
-      ],
-      "test_id": "69632b51-2a2a-449e-8f0f-8f6bb950d3a7",
-      "date_of_passage": "2023-01-07 18:09",
-      "user_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b"
-    },
-    {
-      "id": "e614dda1-479c-4004-869b-7344e576e037",
-      "creator_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b",
-      "by_invitation": false,
-      "title": "тест с баллами 3",
-      "description": "тест",
-      "type": "Psiho",
-      "questions": [
-        {
-          "id": "ddd8f0c0-182e-4108-977c-5dd23d28917b",
-          "number": 0,
-          "question_text": "1",
-          "answers": [
-            {
-              "number": 0,
-              "title": "1",
-              "value": "1"
             },
             {
-              "number": 1,
-              "title": "1",
-              "value": "2"
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
             }
           ],
           "answer": [
@@ -682,19 +803,199 @@
           ]
         },
         {
-          "id": "1096b6b9-202b-459d-8613-2f07be752bb3",
-          "number": 1,
-          "question_text": "2",
+          "id": "229fb548-6cb1-437e-a81b-5d56bb2c41ad",
+          "number": 2,
+          "question_text": "Я письменно фиксирую задачи и цели, с указанием сроков их реализации",
           "answers": [
             {
               "number": 0,
-              "title": "1",
+              "title": "иногда",
               "value": "1"
             },
             {
               "number": 1,
-              "title": "2",
+              "title": "часто",
               "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "61fe7198-ee9f-4445-a87e-3a95d982e4d3",
+          "number": 3,
+          "question_text": "Каждый официальный документ я стараюсь обрабатывать за один раз и окончательно",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "id": "7f1a391b-a222-4835-9a15-19295efa2b48",
+          "number": 4,
+          "question_text": "Каждый день я составляю список предстоящих дел, упорядоченный по приоритетам. Важнейшие вещи я делаю в первую очередь",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "3dd901e8-5d02-43d1-92af-0b0d3ed7c440",
+          "number": 5,
+          "question_text": "Свой рабочий день я освобождаю от посторонних телефонных разговоров незапланированных встреч, неожиданных совещаний",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "id": "f8c4fae5-b554-410e-859f-931eb4a5148f",
+          "number": 6,
+          "question_text": "Свою дневную нагрузку я распределяю в соответствии с графиком моей работоспособности",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "id": "4f616a21-c844-4e65-9e3a-8f71d5939c0b",
+          "number": 7,
+          "question_text": "В моем плане всегда есть окна, позволяющие реагировать на актуальные проблемы",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "f6baf1c2-5c3d-441a-b453-d4ac1faea3ff",
+          "number": 8,
+          "question_text": "Я направляю свою активность таким образом, чтобы в первую очередь концентрироваться на немногих, «жизненно важных» проблемах",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "id": "8ddfa280-09c0-46ee-8ff7-1907872ef0c0",
+          "number": 9,
+          "question_text": "Я умею говорить «нет», когда на мое время претендуют другие, а мне необходимо делать более важные дела",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
             }
           ],
           "answer": [
@@ -702,26 +1003,726 @@
           ]
         }
       ],
-      "date_of_creation": "2023-01-07 18:11",
+      "date_of_creation": "2023-01-08 18:18",
       "ballings": [
         {
           "id": null,
           "number": 0,
           "minValue": "0",
-          "maxValue": "2",
-          "answer": "результкат 1"
+          "maxValue": "15",
+          "answer": "Вы не планируете свое время и находитесь во власти внешних обстоятельств. Вы добьетесь своих целей, если составите список приоритетов и будете придерживаться его."
         },
         {
           "id": null,
           "number": 1,
-          "minValue": "3",
-          "maxValue": "5",
-          "answer": "результат 2"
+          "minValue": "16",
+          "maxValue": "20",
+          "answer": "Вы пытаетесь овладеть своим временем, но не всегда достаточно последовательны, чтобы иметь успех."
+        },
+        {
+          "id": null,
+          "number": 2,
+          "minValue": "20",
+          "maxValue": "25",
+          "answer": "У Вас достаточно высокий уровень самоменеджмента."
+        },
+        {
+          "id": null,
+          "number": 3,
+          "minValue": "26",
+          "maxValue": "35",
+          "answer": "Вы можете служить образцом каждому, кто хочет научиться рационально использовать свое время. У Вас стоит поучиться."
         }
       ],
-      "test_id": "291fbe3f-28f7-48cf-bd55-ec5123149245",
-      "date_of_passage": "2023-01-07 18:11",
-      "user_id": "1afcb0d6-538e-48b5-b74a-d95b2df86f0b"
+      "test_id": "bb6e446a-ae66-4749-b2f3-2043fad07dbd",
+      "date_of_passage": "2023-01-08 18:29",
+      "user_id": "e0d40a79-b324-406e-86cf-3f9094e1eeb7"
+    },
+    {
+      "id": "14e93813-81c6-4d6d-bc89-a64528e262b8",
+      "creator_id": "e0d40a79-b324-406e-86cf-3f9094e1eeb7",
+      "by_invitation": false,
+      "title": "Умение рационально использовать время",
+      "description": "Тест позволяет определить умение рационально использовать время",
+      "type": "Psiho",
+      "questions": [
+        {
+          "id": "330082ad-8538-4943-8761-608c97d25528",
+          "number": 0,
+          "question_text": "Я резервирую в начале рабочего дня время для подготовительной работы, планирования.",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "60d921aa-5ed4-4767-9314-62cf15cb5670",
+          "number": 1,
+          "question_text": "Я перепоручаю все, что может быть перепоручено.",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "229fb548-6cb1-437e-a81b-5d56bb2c41ad",
+          "number": 2,
+          "question_text": "Я письменно фиксирую задачи и цели, с указанием сроков их реализации",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "61fe7198-ee9f-4445-a87e-3a95d982e4d3",
+          "number": 3,
+          "question_text": "Каждый официальный документ я стараюсь обрабатывать за один раз и окончательно",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "id": "7f1a391b-a222-4835-9a15-19295efa2b48",
+          "number": 4,
+          "question_text": "Каждый день я составляю список предстоящих дел, упорядоченный по приоритетам. Важнейшие вещи я делаю в первую очередь",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "3dd901e8-5d02-43d1-92af-0b0d3ed7c440",
+          "number": 5,
+          "question_text": "Свой рабочий день я освобождаю от посторонних телефонных разговоров незапланированных встреч, неожиданных совещаний",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "f8c4fae5-b554-410e-859f-931eb4a5148f",
+          "number": 6,
+          "question_text": "Свою дневную нагрузку я распределяю в соответствии с графиком моей работоспособности",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "4f616a21-c844-4e65-9e3a-8f71d5939c0b",
+          "number": 7,
+          "question_text": "В моем плане всегда есть окна, позволяющие реагировать на актуальные проблемы",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "f6baf1c2-5c3d-441a-b453-d4ac1faea3ff",
+          "number": 8,
+          "question_text": "Я направляю свою активность таким образом, чтобы в первую очередь концентрироваться на немногих, «жизненно важных» проблемах",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "8ddfa280-09c0-46ee-8ff7-1907872ef0c0",
+          "number": 9,
+          "question_text": "Я умею говорить «нет», когда на мое время претендуют другие, а мне необходимо делать более важные дела",
+          "answers": [
+            {
+              "number": 0,
+              "title": "иногда",
+              "value": "1"
+            },
+            {
+              "number": 1,
+              "title": "часто",
+              "value": "2"
+            },
+            {
+              "number": 2,
+              "title": "почти всегда",
+              "value": "3"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        }
+      ],
+      "date_of_creation": "2023-01-08 18:18",
+      "ballings": [
+        {
+          "id": null,
+          "number": 0,
+          "minValue": "0",
+          "maxValue": "15",
+          "answer": "Вы не планируете свое время и находитесь во власти внешних обстоятельств. Вы добьетесь своих целей, если составите список приоритетов и будете придерживаться его."
+        },
+        {
+          "id": null,
+          "number": 1,
+          "minValue": "16",
+          "maxValue": "20",
+          "answer": "Вы пытаетесь овладеть своим временем, но не всегда достаточно последовательны, чтобы иметь успех."
+        },
+        {
+          "id": null,
+          "number": 2,
+          "minValue": "20",
+          "maxValue": "25",
+          "answer": "У Вас достаточно высокий уровень самоменеджмента."
+        },
+        {
+          "id": null,
+          "number": 3,
+          "minValue": "26",
+          "maxValue": "35",
+          "answer": "Вы можете служить образцом каждому, кто хочет научиться рационально использовать свое время. У Вас стоит поучиться."
+        }
+      ],
+      "test_id": "bb6e446a-ae66-4749-b2f3-2043fad07dbd",
+      "date_of_passage": "2023-01-08 18:30",
+      "user_id": "e0d40a79-b324-406e-86cf-3f9094e1eeb7"
+    },
+    {
+      "id": "f062c420-7d27-4e08-8b73-e3e98c65cf31",
+      "creator_id": "e0d40a79-b324-406e-86cf-3f9094e1eeb7",
+      "by_invitation": true,
+      "title": "Ваша нервозность",
+      "description": "Психолог проверит вашу нервозность по ответам на вопросы",
+      "type": "Default",
+      "questions": [
+        {
+          "id": "264dd8ca-897c-4ee0-ab60-4fbacfa7781a",
+          "number": 0,
+          "question_text": "Становится ли вам не по себе, если вы находитесь в полной темноте и плюс к тому - в одиночестве?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "a3a3d988-e34e-458b-85f5-3b8e048e6e2e",
+          "number": 1,
+          "question_text": "Считаете ли вы, что у вас слишком много обязанностей?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "ae97a41d-8bd6-4911-8a4a-1cc00937c9b2",
+          "number": 2,
+          "question_text": "Беспокоитесь ли вы о том, что думают о вас окружающие?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "cbee6c05-6c91-46bf-9527-904ff4045feb",
+          "number": 3,
+          "question_text": "Часто ли вы вздрагиваете, когда звонит телефон?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "id": "77815344-1feb-420e-803a-969b8ed1a154",
+          "number": 4,
+          "question_text": "Беспокоитесь ли вы по мелочам?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "7468750d-69b3-406e-b0e2-0b6f3b0f7328",
+          "number": 5,
+          "question_text": "Беспокоитесь ли вы о своем здоровье?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "id": "bb178b19-c1cf-46ce-86aa-d9332c7d7b67",
+          "number": 6,
+          "question_text": "Беспокоитесь ли вы о деньгах?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "ebb4dc25-a23d-492e-a02a-00915f5bf98f",
+          "number": 7,
+          "question_text": "Сильно ли вы переживаете, если пропускаете свою пересадку, когда едете в транспорте?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "id": "b5861533-e72b-4330-8fb4-4c45af2f2fcc",
+          "number": 8,
+          "question_text": "Мучает ли вас бессонница оттого, что вас что-то волнует в часы, когда вы должны спать?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "35bd18eb-4fec-4b5e-bc49-f4d068a1d9a3",
+          "number": 9,
+          "question_text": "Нуждаетесь ли вы когда-нибудь в снотворном?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        }
+      ],
+      "date_of_creation": "2023-01-08 18:38",
+      "invitation_key": "d1daeba4",
+      "test_id": "3c2a21c8-eec7-4797-955c-159576e62e4b",
+      "date_of_passage": "2023-01-08 18:39",
+      "user_id": "e0d40a79-b324-406e-86cf-3f9094e1eeb7",
+      "comment": "Вы здоровы!"
+    },
+    {
+      "id": "1ce57174-5b3d-48f2-a0b4-cb533f2ed39e",
+      "creator_id": "e0d40a79-b324-406e-86cf-3f9094e1eeb7",
+      "by_invitation": true,
+      "title": "Ваша нервозность",
+      "description": "Психолог проверит вашу нервозность по ответам на вопросы",
+      "type": "Default",
+      "questions": [
+        {
+          "id": "264dd8ca-897c-4ee0-ab60-4fbacfa7781a",
+          "number": 0,
+          "question_text": "Становится ли вам не по себе, если вы находитесь в полной темноте и плюс к тому - в одиночестве?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "a3a3d988-e34e-458b-85f5-3b8e048e6e2e",
+          "number": 1,
+          "question_text": "Считаете ли вы, что у вас слишком много обязанностей?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "id": "ae97a41d-8bd6-4911-8a4a-1cc00937c9b2",
+          "number": 2,
+          "question_text": "Беспокоитесь ли вы о том, что думают о вас окружающие?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "cbee6c05-6c91-46bf-9527-904ff4045feb",
+          "number": 3,
+          "question_text": "Часто ли вы вздрагиваете, когда звонит телефон?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "id": "77815344-1feb-420e-803a-969b8ed1a154",
+          "number": 4,
+          "question_text": "Беспокоитесь ли вы по мелочам?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "7468750d-69b3-406e-b0e2-0b6f3b0f7328",
+          "number": 5,
+          "question_text": "Беспокоитесь ли вы о своем здоровье?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "id": "bb178b19-c1cf-46ce-86aa-d9332c7d7b67",
+          "number": 6,
+          "question_text": "Беспокоитесь ли вы о деньгах?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "ebb4dc25-a23d-492e-a02a-00915f5bf98f",
+          "number": 7,
+          "question_text": "Сильно ли вы переживаете, если пропускаете свою пересадку, когда едете в транспорте?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "id": "b5861533-e72b-4330-8fb4-4c45af2f2fcc",
+          "number": 8,
+          "question_text": "Мучает ли вас бессонница оттого, что вас что-то волнует в часы, когда вы должны спать?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "id": "35bd18eb-4fec-4b5e-bc49-f4d068a1d9a3",
+          "number": 9,
+          "question_text": "Нуждаетесь ли вы когда-нибудь в снотворном?",
+          "answers": [
+            {
+              "number": 0,
+              "title": "да"
+            },
+            {
+              "number": 1,
+              "title": "нет"
+            }
+          ],
+          "answer": [
+            1
+          ]
+        }
+      ],
+      "date_of_creation": "2023-01-08 18:38",
+      "invitation_key": "d1daeba4",
+      "test_id": "3c2a21c8-eec7-4797-955c-159576e62e4b",
+      "date_of_passage": "2023-01-09 00:36",
+      "user_id": "6e04fe2e-6162-4910-a8c3-33a9e32f1269",
+      "comment": "У вас присутствует небольшая тревожность"
     }
   ]
 }
