@@ -29,6 +29,7 @@ export function useUser() {
             await store.dispatch("authentication", user.value)
         } else {
             //store.commit("setErrorMessage", "Неверно указан логин или пароль")
+            //asd
         }
 
         user.value = {
