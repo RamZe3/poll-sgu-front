@@ -1,8 +1,8 @@
 import axios from "axios";
 import {useStore} from "vuex";
 import {onMounted, ref} from "vue";
-import {API_URL, USERS_API_URL} from "@/common/API";
-import {newGuid} from "@/common/GuidLogic";
+import { API_URL_2, USERS_API_URL_2} from "@/common/API";
+//import {newGuid} from "@/common/GuidLogic";
 
 export function useUser() {
     const user = ref(
@@ -17,13 +17,16 @@ export function useUser() {
     const store = useStore()
 
     const login = async () => {
-        //TODO
-        const response = await axios.get(API_URL + USERS_API_URL + '/?email=' + user.value.email
+        const response = await axios.get(API_URL_2 + "/login" + '?login=' + user.value.email
             + "&password=" + user.value.password);
 
-        console.log(user.value)
-        if (response.data.length === 1) {
-            await store.dispatch("authentication", response.data[0])
+        if (response.data.user_id !== undefined) {
+            user.value.id = response.data.user_id
+            user.value.email = response.data.user_email
+            user.value.login = response.data.user_login
+            user.value.password = response.data.user_password
+            user.value.roles = response.data.user_roles_array
+            await store.dispatch("authentication", user.value)
         } else {
             //store.commit("setErrorMessage", "Неверно указан логин или пароль")
         }
@@ -38,26 +41,24 @@ export function useUser() {
     }
 
     const register = async () => {
-        //alert("ASD")
-        //TODO
-        const response = await axios.get(API_URL + USERS_API_URL + '/?email=' + user.value.email);
-        if (response.data.length === 0) {
-            //const errors = validUser(user.value)
-            //if (errors !== ''){
-            //    store.commit("setErrorMessage", errors)
-            //    return
-            //}
+        const response = await axios.get(API_URL_2 + "/login" + '?login=' + user.value.email
+            + "&password=" + user.value.password);
+
+        if (response.data.user_id === undefined) {
             const newUser = {
-                id: newGuid(),
-                email: user.value.email,
-                login: user.value.login,
-                password: user.value.password,
-                roles: user.value.roles,
-                tests_by_invite:[],
+                user_email: user.value.email,
+                user_login: user.value.login,
+                user_password: user.value.password,
+                user_roles_array: user.value.roles,
+                user_tests_by_invite_array:[],
             }
-            //alert(newUser)
-            await axios.post(API_URL + USERS_API_URL + "/", newUser);
-            await store.dispatch("authentication", newUser)
+            const response2 = await axios.post(API_URL_2 + USERS_API_URL_2, newUser);
+            user.value.id = response2.data.user_id
+            user.value.email = response2.data.user_email
+            user.value.login = response2.data.user_login
+            user.value.password = response2.data.user_password
+            user.value.roles = response2.data.user_roles_array
+            await store.dispatch("authentication", user.value)
         } else {
             //store.commit("setErrorMessage", "Пользователь с номером телефона уже существует")
         }
@@ -69,8 +70,6 @@ export function useUser() {
             password: '',
             roles: [],
         }
-
-        //alert("ASD")
     }
 
     const signOut = async () => {
@@ -82,8 +81,13 @@ export function useUser() {
     }
 
     const getLoginByID = async (id) => {
-        const response = await axios.get(API_URL + USERS_API_URL + '/?id=' + id);
-        return response.data[0]
+        const response = await axios.get(API_URL_2 + USERS_API_URL_2 + '/' + id);
+        user.value.id = response.data.user_id
+        user.value.email = response.data.user_email
+        user.value.login = response.data.user_login
+        user.value.password = response.data.user_password
+        user.value.roles = response.data.user_roles_array
+        return user.value
     }
 
     onMounted(checkAuth)
